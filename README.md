@@ -84,9 +84,9 @@ contrastive_ood_stats.json — OOD 统计量
 1. 日常模式
 流式对话 + 文件/图片上传。支持 Ctrl+V 粘贴图片、拖拽上传、快速/深度思考切换。图片会先经过视觉模型描述再生成回复。
 
-![日常模式-快速](images/image-1.png)
+![日常模式-快速](images/1.png)
 
-![日常模式-深度思考](images/image-2.png)
+![日常模式-深度思考](images/2.png)
 
 2. Agent 模式（核心模块）
 自研的多 Agent 协作引擎。采用 Master-Worker 架构：
@@ -101,9 +101,9 @@ SSE 实时推送步骤状态（规划→执行→汇总），前端以步骤条 
 
 支持文件上传，CodeAgent 可直接分析 CSV、图片等文件
 
-![Agent模式-默认](images/image-3.png)
+![Agent模式-默认](images/3.png)
 
-![Agent模式-步骤条](images/image-4.png)
+![Agent模式-步骤条](images/4.png)
 
 3. 知识库 RAG
 FAISS + BM25 混合检索，互补召回
@@ -116,7 +116,7 @@ LLM 自动评估检索质量，过滤低相关片段
 
 支持多文档联合问答，文件池管理
 
-![知识库模式](images/image-5.png)
+![知识库模式](images/5.png)
 
 4. 胸片 AI 诊断
 ResNet50 骨干 + 对比学习，在 ChestX-ray14（11 万张）上预训练
@@ -129,7 +129,7 @@ ResNet50 骨干 + 对比学习，在 ChestX-ray14（11 万张）上预训练
 
 按需生成 AI 诊断报告（疾病概率 + 通俗解释 + 专业建议）
 
-![胸片模式](images/image-6.png)
+![胸片模式](images/6.png)
 
 MCP 服务（胸片诊断）
 胸片诊断功能同时封装为 MCP Server，可供支持 MCP 协议的 AI 应用调用。
@@ -156,7 +156,7 @@ QQ 邮箱 SMTP 发送
 
 支持附件
 
-![邮件模式](images/image-7.png)
+![邮件模式](images/7.png)
 
 技术栈
 层	技术
