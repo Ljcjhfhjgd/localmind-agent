@@ -1,0 +1,27 @@
+{
+  "memory": {
+    "enabled": true
+  },
+  "email": {
+    "senderEmail": "",
+    "authCode": ""
+  },
+  "tools": {
+    "webSearch": true,
+    "executeCode": true,
+    "calculate": true,
+    "getCurrentTime": true
+  },
+  "modes": {
+    "order": [
+      "normal",
+      "agent",
+      "rag",
+      "xray",
+      "email",
+      "comingsoon"
+    ],
+    "disabled": []
+  },
+  "apiKey": ""
+}

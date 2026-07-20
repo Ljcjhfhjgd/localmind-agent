@@ -1,0 +1,800 @@
+2026-06-18 22:42:52 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-18 22:42:52 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-18 22:42:54 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-18 22:42:54 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-18 22:42:54 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-18 22:42:54 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-18 22:42:56 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-18 22:42:56 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-18 22:42:56 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-18 22:42:56 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-18 22:42:56 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-18 22:43:05 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 403 (0.00s)
+2026-06-18 22:43:05 | INFO     | server.app:log_requests:68 | GET /settings → 200 (0.00s)
+2026-06-18 22:43:05 | INFO     | server.app:log_requests:68 | OPTIONS /email/drafts → 200 (0.00s)
+2026-06-18 22:43:05 | INFO     | server.app:log_requests:68 | OPTIONS /email/sent → 200 (0.00s)
+2026-06-18 22:43:05 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations → 200 (0.00s)
+2026-06-18 22:43:05 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 22:43:05 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 22:43:05 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-18 22:43:05 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-18 22:43:05 | INFO     | agent.core:__init__:75 | 已加载用户设置覆盖
+2026-06-18 22:43:05 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-18 22:43:05 | INFO     | agent.core:__init__:84 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-18 22:43:05 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.01s)
+2026-06-18 22:43:24 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/new → 200 (0.00s)
+2026-06-18 22:43:24 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 22:43:24 | INFO     | server.app:log_requests:68 | OPTIONS /chat → 200 (0.00s)
+2026-06-18 22:43:24 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一篇1000字关于春天的作文 (等待中: 0)
+2026-06-18 22:43:24 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: normal
+2026-06-18 22:43:24 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一篇1000字关于春天的作文, 模式: normal
+2026-06-18 22:43:24 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 22:43:35 | ERROR    | llm.client:chat:61 | LLM 调用失败: Server error '500 Internal Server Error' for url 'http://localhost:11434/api/chat'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+2026-06-18 22:43:35 | DEBUG    | agent.core:_generate_title:1137 | 标题生成失败: Server error '500 Internal Server Error' for url 'http://localhost:11434/api/chat'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+2026-06-18 22:43:47 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一篇1000字关于春天的作文
+2026-06-18 22:43:47 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 22:45:30 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-18 22:45:30 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-18 22:45:33 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-18 22:45:33 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-18 22:45:33 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-18 22:45:33 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-18 22:45:35 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-18 22:45:35 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-18 22:45:35 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-18 22:45:35 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-18 22:45:35 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-18 22:45:39 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 403 (0.00s)
+2026-06-18 22:45:39 | INFO     | server.app:log_requests:68 | GET /settings → 200 (0.00s)
+2026-06-18 22:45:39 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 22:45:39 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 22:45:39 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-18 22:45:39 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-18 22:45:39 | INFO     | agent.core:__init__:75 | 已加载用户设置覆盖
+2026-06-18 22:45:39 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-18 22:45:39 | INFO     | agent.core:__init__:84 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-18 22:45:39 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.01s)
+2026-06-18 22:45:40 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/switch → 200 (0.00s)
+2026-06-18 22:45:40 | INFO     | server.app:log_requests:68 | POST /chat/conversations/switch → 200 (0.00s)
+2026-06-18 22:45:40 | INFO     | server.app:log_requests:68 | OPTIONS /chat/history → 200 (0.00s)
+2026-06-18 22:45:40 | INFO     | server.app:log_requests:68 | GET /chat/history → 200 (0.00s)
+2026-06-18 22:45:40 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 22:45:44 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/pop → 200 (0.00s)
+2026-06-18 22:45:44 | INFO     | server.app:log_requests:68 | POST /chat/conversations/pop → 200 (0.01s)
+2026-06-18 22:45:44 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一篇1000字关于春天的作文 (等待中: 0)
+2026-06-18 22:45:44 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一篇1000字关于春天的作文, 模式: normal
+2026-06-18 22:45:44 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 22:45:45 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 22:45:55 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一篇1000字关于春天的作文
+2026-06-18 22:45:55 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 22:46:30 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 因伟达显卡3060和4060的区别 (等待中: 0)
+2026-06-18 22:46:30 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: normal
+2026-06-18 22:46:30 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 因伟达显卡3060和4060的区别, 模式: normal
+2026-06-18 22:46:30 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 22:46:38 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 因伟达显卡3060和4060的区别
+2026-06-18 22:46:39 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 22:47:01 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 因伟达显卡3060和4060的区别，用表格形式总结 (等待中: 0)
+2026-06-18 22:47:01 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: normal
+2026-06-18 22:47:01 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 因伟达显卡3060和4060的区别，用表格形式总结, 模式: normal
+2026-06-18 22:47:01 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 22:47:09 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 因伟达显卡3060和4060的区别，用表格形式总结
+2026-06-18 22:47:09 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 22:48:02 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-18 22:48:02 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-18 22:48:04 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-18 22:48:04 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-18 22:48:04 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-18 22:48:04 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-18 22:48:06 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-18 22:48:06 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-18 22:48:06 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-18 22:48:06 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-18 22:48:06 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-18 22:48:10 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-18 22:48:10 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-18 22:48:10 | INFO     | agent.core:__init__:75 | 已加载用户设置覆盖
+2026-06-18 22:48:10 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-18 22:48:10 | INFO     | agent.core:__init__:84 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-18 22:48:10 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 对比这两款显卡，哪个更适合3D渲染？ (等待中: 0)
+2026-06-18 22:48:10 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: normal
+2026-06-18 22:48:10 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 对比这两款显卡，哪个更适合3D渲染？, 模式: normal
+2026-06-18 22:48:10 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.02s)
+2026-06-18 22:48:11 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 22:48:18 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 对比这两款显卡，哪个更适合3D渲染？
+2026-06-18 22:48:18 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 22:48:50 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 22:48:50 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 因伟达显卡3060和4060的区别 (等待中: 0)
+2026-06-18 22:48:50 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: normal
+2026-06-18 22:48:50 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 因伟达显卡3060和4060的区别, 模式: normal
+2026-06-18 22:48:50 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.02s)
+2026-06-18 22:48:51 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 22:49:00 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 因伟达显卡3060和4060的区别
+2026-06-18 22:49:00 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 22:50:01 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-18 22:50:01 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-18 22:50:03 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-18 22:50:03 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-18 22:50:03 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-18 22:50:03 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-18 22:50:05 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-18 22:50:05 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-18 22:50:05 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-18 22:50:05 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-18 22:50:05 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-18 22:50:08 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 403 (0.00s)
+2026-06-18 22:50:08 | INFO     | server.app:log_requests:68 | GET /settings → 200 (0.00s)
+2026-06-18 22:50:08 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 22:50:08 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 22:50:08 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-18 22:50:08 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-18 22:50:08 | INFO     | agent.core:__init__:75 | 已加载用户设置覆盖
+2026-06-18 22:50:08 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-18 22:50:08 | INFO     | agent.core:__init__:84 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-18 22:50:08 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.01s)
+2026-06-18 22:50:10 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.02s)
+2026-06-18 22:50:10 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 因伟达显卡3060和4060的区别 (等待中: 0)
+2026-06-18 22:50:10 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: normal
+2026-06-18 22:50:10 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 因伟达显卡3060和4060的区别, 模式: normal
+2026-06-18 22:50:10 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 22:50:11 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 22:50:18 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 因伟达显卡3060和4060的区别
+2026-06-18 22:50:18 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 22:51:19 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/40fde74a-ca22-4d8e-9cc6-802fb3edbc73 → 200 (0.00s)
+2026-06-18 22:51:19 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/40fde74a-ca22-4d8e-9cc6-802fb3edbc73 → 200 (0.00s)
+2026-06-18 22:51:19 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 22:51:20 | INFO     | server.app:log_requests:68 | OPTIONS /chat/stop → 200 (0.00s)
+2026-06-18 22:51:20 | INFO     | server.app:log_requests:68 | OPTIONS /chat/mode/switch → 200 (0.00s)
+2026-06-18 22:51:20 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-18 22:51:20 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [email] 启用工具: ['send_email']
+2026-06-18 22:51:20 | INFO     | server.app:log_requests:68 | POST /chat/stop → 200 (0.00s)
+2026-06-18 22:51:20 | INFO     | agent.core:switch_mode:129 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-18 22:51:20 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-18 22:51:20 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations → 200 (0.00s)
+2026-06-18 22:51:20 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 22:51:20 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 22:51:20 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 22:51:20 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 22:51:20 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 22:51:20 | INFO     | server.app:log_requests:68 | OPTIONS /chat/prompts/email_polish → 200 (0.00s)
+2026-06-18 22:51:20 | INFO     | server.app:log_requests:68 | OPTIONS /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-18 22:51:20 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-18 22:51:20 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-18 22:51:21 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 22:51:21 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封订单确认邮件，感谢客户购买 (等待中: 0)
+2026-06-18 22:51:21 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: email
+2026-06-18 22:51:21 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封订单确认邮件，感谢客户购买, 模式: email
+2026-06-18 22:51:22 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 22:51:25 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封订单确认邮件，感谢客户购买
+2026-06-18 22:51:30 | INFO     | server.app:log_requests:68 | POST /email/drafts → 200 (0.01s)
+2026-06-18 22:51:30 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 22:51:30 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 22:51:34 | INFO     | server.app:log_requests:68 | OPTIONS /email/drafts/draft_1781794290962 → 200 (0.00s)
+2026-06-18 22:51:34 | INFO     | server.app:log_requests:68 | GET /email/drafts/draft_1781794290962 → 200 (0.00s)
+2026-06-18 22:51:34 | INFO     | server.routes.email_data:delete_draft:88 | 删除草稿: draft_1781794290962
+2026-06-18 22:51:34 | INFO     | server.app:log_requests:68 | DELETE /email/drafts/draft_1781794290962 → 200 (0.00s)
+2026-06-18 22:51:34 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/2329ab9c-2c3b-43c1-93aa-83ebe87db2a2 → 200 (0.00s)
+2026-06-18 22:51:34 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/2329ab9c-2c3b-43c1-93aa-83ebe87db2a2 → 200 (0.00s)
+2026-06-18 22:51:34 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 22:51:34 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 22:51:34 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 22:51:34 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封订单确认邮件，感谢客户购买 (等待中: 0)
+2026-06-18 22:51:34 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: email
+2026-06-18 22:51:34 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封订单确认邮件，感谢客户购买, 模式: email
+2026-06-18 22:51:34 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 22:51:38 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封订单确认邮件，感谢客户购买
+2026-06-18 22:51:41 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/0c2fc763-63d8-4e17-ace3-4f7eee113bc2 → 200 (0.00s)
+2026-06-18 22:51:41 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/0c2fc763-63d8-4e17-ace3-4f7eee113bc2 → 200 (0.00s)
+2026-06-18 22:51:41 | ERROR    | server.app:global_exception_handler:74 | 未处理的异常: [WinError 5] 拒绝访问。: 'data\\conversations\\email\\0c2fc763-63d8-4e17-ace3-4f7eee113bc2.json'
+2026-06-18 22:51:41 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/0c2fc763-63d8-4e17-ace3-4f7eee113bc2 → 200 (0.11s)
+2026-06-18 22:51:47 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 22:51:47 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封求职邮件，应聘前端开发岗位 (等待中: 0)
+2026-06-18 22:51:47 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: email
+2026-06-18 22:51:47 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封求职邮件，应聘前端开发岗位, 模式: email
+2026-06-18 22:51:47 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 22:51:53 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封求职邮件，应聘前端开发岗位
+2026-06-18 22:51:59 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 请根据用户对以下邮件的修改意见，重新生成邮件。
+
+请严格 (等待中: 0)
+2026-06-18 22:51:59 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: email
+2026-06-18 22:51:59 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 请根据用户对以下邮件的修改意见，重新生成邮件。
+
+请严格, 模式: email
+2026-06-18 22:51:59 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.06s)
+2026-06-18 22:52:04 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 请根据用户对以下邮件的修改意见，重新生成邮件。
+
+请严格
+2026-06-18 22:53:04 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/99944fa2-82f1-4d01-9a59-d6770b8cdd55 → 200 (0.00s)
+2026-06-18 22:53:04 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/99944fa2-82f1-4d01-9a59-d6770b8cdd55 → 200 (0.00s)
+2026-06-18 22:53:04 | ERROR    | server.app:global_exception_handler:74 | 未处理的异常: [WinError 5] 拒绝访问。: 'data\\conversations\\email\\99944fa2-82f1-4d01-9a59-d6770b8cdd55.json'
+2026-06-18 22:53:04 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/99944fa2-82f1-4d01-9a59-d6770b8cdd55 → 200 (0.01s)
+2026-06-18 22:53:04 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 22:53:04 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封道歉邮件，因为项目延期向客户致歉 (等待中: 0)
+2026-06-18 22:53:04 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: email
+2026-06-18 22:53:04 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封道歉邮件，因为项目延期向客户致歉, 模式: email
+2026-06-18 22:53:05 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 22:53:07 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封道歉邮件，因为项目延期向客户致歉
+2026-06-18 22:53:16 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/d2c676a4-80d3-4bfe-874d-198c4827c2cc → 200 (0.00s)
+2026-06-18 22:53:16 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/d2c676a4-80d3-4bfe-874d-198c4827c2cc → 200 (0.00s)
+2026-06-18 22:53:16 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/d2c676a4-80d3-4bfe-874d-198c4827c2cc → 200 (0.00s)
+2026-06-18 22:53:16 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/d2c676a4-80d3-4bfe-874d-198c4827c2cc → 200 (0.00s)
+2026-06-18 22:55:46 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-18 22:55:46 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-18 22:56:03 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-18 22:56:03 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-18 22:57:28 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 403 (0.00s)
+2026-06-18 22:57:28 | INFO     | server.app:log_requests:68 | GET /settings → 200 (0.00s)
+2026-06-18 22:57:28 | INFO     | server.app:log_requests:68 | OPTIONS /email/drafts → 200 (0.00s)
+2026-06-18 22:57:28 | INFO     | server.app:log_requests:68 | OPTIONS /email/sent → 200 (0.00s)
+2026-06-18 22:57:28 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations → 200 (0.00s)
+2026-06-18 22:57:28 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 22:57:28 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 22:57:28 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 22:57:29 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [email] 启用工具: ['send_email']
+2026-06-18 22:57:29 | INFO     | agent.core:switch_mode:129 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-18 22:57:29 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-18 22:57:29 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 22:57:29 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 22:57:29 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 22:57:29 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 22:57:29 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 22:57:29 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-18 22:57:29 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-18 22:57:30 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/new → 200 (0.00s)
+2026-06-18 22:57:30 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 22:57:30 | INFO     | server.app:log_requests:68 | OPTIONS /chat → 200 (0.00s)
+2026-06-18 22:57:30 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封邀请函，邀请朋友参加周末聚会 (等待中: 0)
+2026-06-18 22:57:30 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: email
+2026-06-18 22:57:30 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封邀请函，邀请朋友参加周末聚会, 模式: email
+2026-06-18 22:57:30 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.02s)
+2026-06-18 22:57:34 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封邀请函，邀请朋友参加周末聚会
+2026-06-18 22:57:35 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 请润色以下邮件正文，优化措辞、修正语法错误，保持原意不变。 (等待中: 0)
+2026-06-18 22:57:35 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: email
+2026-06-18 22:57:35 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 请润色以下邮件正文，优化措辞、修正语法错误，保持原意不变。, 模式: email
+2026-06-18 22:57:35 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.02s)
+2026-06-18 22:57:40 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 请润色以下邮件正文，优化措辞、修正语法错误，保持原意不变。
+2026-06-18 22:57:43 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 请根据用户对以下邮件的修改意见，重新生成邮件。
+
+请严格 (等待中: 0)
+2026-06-18 22:57:43 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: email
+2026-06-18 22:57:43 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 请根据用户对以下邮件的修改意见，重新生成邮件。
+
+请严格, 模式: email
+2026-06-18 22:57:43 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.02s)
+2026-06-18 22:57:46 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 请根据用户对以下邮件的修改意见，重新生成邮件。
+
+请严格
+2026-06-18 23:24:39 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-18 23:24:39 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-18 23:24:42 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-18 23:24:42 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-18 23:24:42 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-18 23:24:42 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-18 23:24:44 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-18 23:24:44 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-18 23:24:44 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-18 23:24:44 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-18 23:24:44 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-18 23:24:48 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 403 (0.00s)
+2026-06-18 23:24:48 | INFO     | server.app:log_requests:68 | GET /settings → 200 (0.00s)
+2026-06-18 23:24:48 | INFO     | server.app:log_requests:68 | OPTIONS /email/drafts → 200 (0.00s)
+2026-06-18 23:24:48 | INFO     | server.app:log_requests:68 | OPTIONS /email/sent → 200 (0.00s)
+2026-06-18 23:24:48 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations → 200 (0.00s)
+2026-06-18 23:24:48 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:24:48 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:24:48 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-18 23:24:48 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-18 23:24:48 | INFO     | agent.core:__init__:75 | 已加载用户设置覆盖
+2026-06-18 23:24:48 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-18 23:24:48 | INFO     | agent.core:__init__:84 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-18 23:24:48 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.01s)
+2026-06-18 23:24:49 | INFO     | server.app:log_requests:68 | OPTIONS /chat/mode/switch → 200 (0.00s)
+2026-06-18 23:24:49 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [email] 启用工具: ['send_email']
+2026-06-18 23:24:49 | INFO     | agent.core:switch_mode:129 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-18 23:24:49 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-18 23:24:49 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations → 200 (0.00s)
+2026-06-18 23:24:49 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:24:49 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:24:49 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 23:24:49 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:24:49 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:24:49 | INFO     | server.app:log_requests:68 | OPTIONS /chat/prompts/email_polish → 200 (0.00s)
+2026-06-18 23:24:49 | INFO     | server.app:log_requests:68 | OPTIONS /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-18 23:24:49 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-18 23:24:49 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-18 23:24:52 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/new → 200 (0.00s)
+2026-06-18 23:24:52 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 23:24:52 | INFO     | server.app:log_requests:68 | OPTIONS /chat → 200 (0.00s)
+2026-06-18 23:24:52 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封催款邮件，提醒客户付款 (等待中: 0)
+2026-06-18 23:24:52 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: email
+2026-06-18 23:24:52 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封催款邮件，提醒客户付款, 模式: email
+2026-06-18 23:24:52 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 23:25:00 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封催款邮件，提醒客户付款
+2026-06-18 23:25:05 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/11c7d2a2-b53f-48f5-973c-bb9d46c2372c → 200 (0.00s)
+2026-06-18 23:25:05 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/11c7d2a2-b53f-48f5-973c-bb9d46c2372c → 200 (0.00s)
+2026-06-18 23:25:05 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/11c7d2a2-b53f-48f5-973c-bb9d46c2372c → 200 (0.00s)
+2026-06-18 23:25:05 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/11c7d2a2-b53f-48f5-973c-bb9d46c2372c → 200 (0.00s)
+2026-06-18 23:29:34 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-18 23:29:34 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-18 23:29:36 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-18 23:29:36 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-18 23:29:36 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-18 23:29:36 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-18 23:29:38 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-18 23:29:38 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-18 23:29:39 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-18 23:29:39 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-18 23:29:39 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-18 23:29:42 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 403 (0.00s)
+2026-06-18 23:29:42 | INFO     | server.app:log_requests:68 | GET /settings → 200 (0.00s)
+2026-06-18 23:29:42 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:29:42 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:29:42 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-18 23:29:42 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-18 23:29:42 | INFO     | agent.core:__init__:75 | 已加载用户设置覆盖
+2026-06-18 23:29:42 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-18 23:29:42 | INFO     | agent.core:__init__:84 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-18 23:29:42 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.01s)
+2026-06-18 23:29:44 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [email] 启用工具: ['send_email']
+2026-06-18 23:29:44 | INFO     | agent.core:switch_mode:129 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-18 23:29:44 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-18 23:29:44 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 23:29:44 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:29:44 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:29:44 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:29:44 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:29:44 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-18 23:29:44 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-18 23:29:50 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 23:29:50 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封请假邮件 (等待中: 0)
+2026-06-18 23:29:50 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: email
+2026-06-18 23:29:50 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封请假邮件, 模式: email
+2026-06-18 23:29:50 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 23:29:53 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封请假邮件
+2026-06-18 23:30:06 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/2c8c2eef-bdfd-4e2e-a4c5-197c50ccd656 → 200 (0.00s)
+2026-06-18 23:30:06 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/2c8c2eef-bdfd-4e2e-a4c5-197c50ccd656 → 200 (0.00s)
+2026-06-18 23:30:06 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/2c8c2eef-bdfd-4e2e-a4c5-197c50ccd656 → 200 (0.00s)
+2026-06-18 23:30:06 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/2c8c2eef-bdfd-4e2e-a4c5-197c50ccd656 → 200 (0.00s)
+2026-06-18 23:31:05 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-18 23:31:05 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-18 23:31:07 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-18 23:31:07 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-18 23:31:07 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-18 23:31:07 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-18 23:31:09 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-18 23:31:09 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-18 23:31:09 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-18 23:31:09 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-18 23:31:09 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-18 23:31:22 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-18 23:31:22 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-18 23:31:22 | INFO     | agent.core:__init__:75 | 已加载用户设置覆盖
+2026-06-18 23:31:22 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-18 23:31:22 | INFO     | agent.core:__init__:84 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-18 23:31:22 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [email] 启用工具: ['send_email']
+2026-06-18 23:31:22 | INFO     | agent.core:switch_mode:129 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-18 23:31:22 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.01s)
+2026-06-18 23:31:22 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封请假邮件 (等待中: 0)
+2026-06-18 23:31:22 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: email
+2026-06-18 23:31:22 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封请假邮件, 模式: email
+2026-06-18 23:31:22 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 23:31:26 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封请假邮件
+2026-06-18 23:33:04 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-18 23:33:04 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-18 23:33:06 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-18 23:33:06 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-18 23:33:06 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-18 23:33:06 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-18 23:33:08 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-18 23:33:08 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-18 23:33:08 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-18 23:33:08 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-18 23:33:08 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-18 23:33:15 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 403 (0.00s)
+2026-06-18 23:33:15 | INFO     | server.app:log_requests:68 | GET /settings → 200 (0.00s)
+2026-06-18 23:33:15 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:33:15 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:33:15 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-18 23:33:15 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-18 23:33:15 | INFO     | agent.core:__init__:75 | 已加载用户设置覆盖
+2026-06-18 23:33:15 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-18 23:33:15 | INFO     | agent.core:__init__:84 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-18 23:33:15 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.01s)
+2026-06-18 23:33:18 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [email] 启用工具: ['send_email']
+2026-06-18 23:33:18 | INFO     | agent.core:switch_mode:129 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-18 23:33:18 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-18 23:33:18 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 23:33:18 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:33:18 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:33:18 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:33:18 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:33:18 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-18 23:33:18 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-18 23:33:19 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 23:33:19 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封复工通知邮件 (等待中: 0)
+2026-06-18 23:33:19 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: email
+2026-06-18 23:33:19 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封复工通知邮件, 模式: email
+2026-06-18 23:33:19 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.02s)
+2026-06-18 23:33:22 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封复工通知邮件
+2026-06-18 23:34:10 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 403 (0.00s)
+2026-06-18 23:34:10 | INFO     | server.app:log_requests:68 | GET /settings → 200 (0.00s)
+2026-06-18 23:34:10 | INFO     | server.app:log_requests:68 | OPTIONS /email/drafts → 200 (0.00s)
+2026-06-18 23:34:10 | INFO     | server.app:log_requests:68 | OPTIONS /email/sent → 200 (0.00s)
+2026-06-18 23:34:10 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations → 200 (0.00s)
+2026-06-18 23:34:10 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:34:10 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:34:10 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 23:34:55 | INFO     | server.app:log_requests:68 | OPTIONS /chat/mode/switch → 200 (0.00s)
+2026-06-18 23:34:55 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [email] 启用工具: ['send_email']
+2026-06-18 23:34:55 | INFO     | agent.core:switch_mode:129 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-18 23:34:55 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-18 23:34:55 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations → 200 (0.00s)
+2026-06-18 23:34:55 | INFO     | server.app:log_requests:68 | OPTIONS /email/drafts → 200 (0.01s)
+2026-06-18 23:34:55 | INFO     | server.app:log_requests:68 | OPTIONS /email/sent → 200 (0.00s)
+2026-06-18 23:34:55 | INFO     | server.app:log_requests:68 | OPTIONS /email/drafts → 200 (0.00s)
+2026-06-18 23:34:55 | INFO     | server.app:log_requests:68 | OPTIONS /email/sent → 200 (0.00s)
+2026-06-18 23:34:55 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.01s)
+2026-06-18 23:34:55 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.01s)
+2026-06-18 23:34:55 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.01s)
+2026-06-18 23:34:55 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.01s)
+2026-06-18 23:34:55 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:34:55 | INFO     | server.app:log_requests:68 | OPTIONS /chat/prompts/email_polish → 200 (0.00s)
+2026-06-18 23:34:55 | INFO     | server.app:log_requests:68 | OPTIONS /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-18 23:34:55 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-18 23:34:55 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-18 23:34:56 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/new → 200 (0.00s)
+2026-06-18 23:34:56 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 23:34:56 | INFO     | server.app:log_requests:68 | OPTIONS /chat → 200 (0.00s)
+2026-06-18 23:34:56 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封直播通知邮件 (等待中: 0)
+2026-06-18 23:34:56 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: email
+2026-06-18 23:34:56 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封直播通知邮件, 模式: email
+2026-06-18 23:34:56 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 23:34:59 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封直播通知邮件
+2026-06-18 23:39:45 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-18 23:39:45 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-18 23:39:47 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-18 23:39:47 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-18 23:39:47 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-18 23:39:47 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-18 23:39:49 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-18 23:39:49 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-18 23:39:49 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-18 23:39:49 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-18 23:39:49 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-18 23:39:52 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 403 (0.00s)
+2026-06-18 23:39:52 | INFO     | server.app:log_requests:68 | GET /settings → 200 (0.00s)
+2026-06-18 23:39:52 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.01s)
+2026-06-18 23:39:52 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-18 23:39:52 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.01s)
+2026-06-18 23:39:52 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-18 23:39:52 | INFO     | agent.core:__init__:75 | 已加载用户设置覆盖
+2026-06-18 23:39:52 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-18 23:39:52 | INFO     | agent.core:__init__:84 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-18 23:39:52 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.01s)
+2026-06-18 23:39:53 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [email] 启用工具: ['send_email']
+2026-06-18 23:39:53 | INFO     | agent.core:switch_mode:129 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-18 23:39:53 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-18 23:39:53 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 23:39:53 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:39:53 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:39:53 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:39:53 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:39:53 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-18 23:39:53 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-18 23:39:55 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 23:39:55 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封商务合作邀请邮件 (等待中: 0)
+2026-06-18 23:39:55 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: email
+2026-06-18 23:39:55 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封商务合作邀请邮件, 模式: email
+2026-06-18 23:39:55 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 23:39:59 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封商务合作邀请邮件
+2026-06-18 23:40:03 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/afa41563-c603-4fa9-a4bd-3b1bfa7fa9a3 → 200 (0.00s)
+2026-06-18 23:40:03 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/afa41563-c603-4fa9-a4bd-3b1bfa7fa9a3 → 200 (0.00s)
+2026-06-18 23:40:03 | ERROR    | server.app:global_exception_handler:74 | 未处理的异常: [WinError 2] 系统找不到指定的文件。: 'data\\conversations\\email\\afa41563-c603-4fa9-a4bd-3b1bfa7fa9a3.json'
+2026-06-18 23:40:03 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/afa41563-c603-4fa9-a4bd-3b1bfa7fa9a3 → 200 (0.10s)
+2026-06-18 23:40:04 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 23:40:04 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封公司团建通知邮件 (等待中: 0)
+2026-06-18 23:40:04 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: email
+2026-06-18 23:40:04 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封公司团建通知邮件, 模式: email
+2026-06-18 23:40:04 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 23:40:09 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封公司团建通知邮件
+2026-06-18 23:40:10 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/a598471d-3cb7-4723-b5d5-9985ed8df88f → 200 (0.00s)
+2026-06-18 23:40:10 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/a598471d-3cb7-4723-b5d5-9985ed8df88f → 200 (0.00s)
+2026-06-18 23:40:10 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/a598471d-3cb7-4723-b5d5-9985ed8df88f → 200 (0.00s)
+2026-06-18 23:40:10 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/a598471d-3cb7-4723-b5d5-9985ed8df88f → 200 (0.00s)
+2026-06-18 23:40:11 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 23:40:11 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封公司团建通知邮件 (等待中: 0)
+2026-06-18 23:40:11 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: email
+2026-06-18 23:40:11 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封公司团建通知邮件, 模式: email
+2026-06-18 23:40:11 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 23:40:16 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封公司团建通知邮件
+2026-06-18 23:40:20 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/1bfc126d-4d58-4fe6-ba27-d3233e338670 → 200 (0.00s)
+2026-06-18 23:40:20 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/1bfc126d-4d58-4fe6-ba27-d3233e338670 → 200 (0.00s)
+2026-06-18 23:40:20 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/1bfc126d-4d58-4fe6-ba27-d3233e338670 → 200 (0.00s)
+2026-06-18 23:40:20 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/1bfc126d-4d58-4fe6-ba27-d3233e338670 → 200 (0.00s)
+2026-06-18 23:42:36 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-18 23:42:36 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-18 23:42:38 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-18 23:42:38 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-18 23:42:38 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-18 23:42:38 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-18 23:42:40 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-18 23:42:40 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-18 23:42:40 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-18 23:42:40 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-18 23:42:40 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-18 23:42:43 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-18 23:42:43 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-18 23:42:43 | INFO     | agent.core:__init__:75 | 已加载用户设置覆盖
+2026-06-18 23:42:43 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-18 23:42:43 | INFO     | agent.core:__init__:84 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-18 23:42:43 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [email] 启用工具: ['send_email']
+2026-06-18 23:42:43 | INFO     | agent.core:switch_mode:129 | 切换模式: email → qwen3:4b
+2026-06-18 23:42:43 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.01s)
+2026-06-18 23:42:43 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封会员到期提醒邮件 (等待中: 0)
+2026-06-18 23:42:43 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen3:4b, 模式: email
+2026-06-18 23:42:43 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封会员到期提醒邮件, 模式: email
+2026-06-18 23:42:43 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 23:44:48 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封会员到期提醒邮件
+2026-06-18 23:49:33 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-18 23:49:33 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-18 23:49:35 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-18 23:49:35 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-18 23:49:35 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-18 23:49:35 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-18 23:49:37 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-18 23:49:37 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-18 23:49:37 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-18 23:49:38 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-18 23:49:38 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-18 23:49:42 | INFO     | server.app:log_requests:68 | GET /settings → 200 (0.00s)
+2026-06-18 23:49:42 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 403 (0.00s)
+2026-06-18 23:49:42 | INFO     | server.app:log_requests:68 | OPTIONS /email/drafts → 200 (0.00s)
+2026-06-18 23:49:42 | INFO     | server.app:log_requests:68 | OPTIONS /email/sent → 200 (0.00s)
+2026-06-18 23:49:42 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations → 200 (0.00s)
+2026-06-18 23:49:42 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:49:42 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:49:42 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-18 23:49:42 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-18 23:49:42 | INFO     | agent.core:__init__:75 | 已加载用户设置覆盖
+2026-06-18 23:49:42 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-18 23:49:42 | INFO     | agent.core:__init__:84 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-18 23:49:42 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.01s)
+2026-06-18 23:49:43 | INFO     | server.app:log_requests:68 | OPTIONS /chat/mode/switch → 200 (0.00s)
+2026-06-18 23:49:43 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [email] 启用工具: ['send_email']
+2026-06-18 23:49:43 | INFO     | agent.core:switch_mode:129 | 切换模式: email → qwen2.5:0.5b
+2026-06-18 23:49:43 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-18 23:49:43 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations → 200 (0.00s)
+2026-06-18 23:49:43 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:49:43 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:49:43 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 23:49:43 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:49:43 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:49:43 | INFO     | server.app:log_requests:68 | OPTIONS /chat/prompts/email_polish → 200 (0.00s)
+2026-06-18 23:49:43 | INFO     | server.app:log_requests:68 | OPTIONS /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-18 23:49:43 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-18 23:49:43 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-18 23:49:44 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/new → 200 (0.00s)
+2026-06-18 23:49:44 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 23:49:44 | INFO     | server.app:log_requests:68 | OPTIONS /chat → 200 (0.00s)
+2026-06-18 23:49:44 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封自我介绍邮件，发给新同事 (等待中: 0)
+2026-06-18 23:49:44 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:0.5b, 模式: email
+2026-06-18 23:49:44 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封自我介绍邮件，发给新同事, 模式: email
+2026-06-18 23:49:44 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.02s)
+2026-06-18 23:49:54 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封自我介绍邮件，发给新同事
+2026-06-18 23:51:43 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-18 23:51:43 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-18 23:51:45 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-18 23:51:45 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-18 23:51:45 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-18 23:51:45 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-18 23:51:47 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-18 23:51:47 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-18 23:51:47 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-18 23:51:47 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-18 23:51:47 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-18 23:51:52 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 403 (0.00s)
+2026-06-18 23:51:52 | INFO     | server.app:log_requests:68 | GET /settings → 200 (0.00s)
+2026-06-18 23:51:52 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:51:52 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.01s)
+2026-06-18 23:51:52 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-18 23:51:52 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-18 23:51:52 | INFO     | agent.core:__init__:75 | 已加载用户设置覆盖
+2026-06-18 23:51:52 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-18 23:51:52 | INFO     | agent.core:__init__:84 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-18 23:51:52 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.01s)
+2026-06-18 23:51:53 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [email] 启用工具: ['send_email']
+2026-06-18 23:51:53 | INFO     | agent.core:switch_mode:129 | 切换模式: email → qwen2.5:0.5b
+2026-06-18 23:51:53 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-18 23:51:53 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 23:51:53 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:51:53 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:51:53 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:51:53 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:51:53 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-18 23:51:53 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-18 23:51:57 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 23:51:57 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封公司团建通知邮件 (等待中: 0)
+2026-06-18 23:51:57 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:0.5b, 模式: email
+2026-06-18 23:51:57 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封公司团建通知邮件, 模式: email
+2026-06-18 23:51:57 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.02s)
+2026-06-18 23:51:59 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封公司团建通知邮件
+2026-06-18 23:52:14 | INFO     | server.app:log_requests:68 | POST /email/drafts → 200 (0.00s)
+2026-06-18 23:52:14 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:52:14 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:52:15 | INFO     | server.app:log_requests:68 | OPTIONS /email/drafts/draft_1781797934423 → 200 (0.00s)
+2026-06-18 23:52:15 | INFO     | server.app:log_requests:68 | GET /email/drafts/draft_1781797934423 → 200 (0.00s)
+2026-06-18 23:52:15 | INFO     | server.app:log_requests:68 | OPTIONS /chat/history → 200 (0.00s)
+2026-06-18 23:52:15 | INFO     | server.app:log_requests:68 | GET /chat/history → 200 (0.00s)
+2026-06-18 23:52:18 | INFO     | server.app:log_requests:68 | POST /email/drafts → 200 (0.01s)
+2026-06-18 23:52:18 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:52:18 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.01s)
+2026-06-18 23:52:18 | INFO     | server.app:log_requests:68 | OPTIONS /chat/email/send → 200 (0.00s)
+2026-06-18 23:52:19 | INFO     | server.app:log_requests:68 | POST /chat/email/send → 200 (1.08s)
+2026-06-18 23:52:25 | INFO     | server.app:log_requests:68 | GET /email/drafts/draft_1781797934423 → 200 (0.00s)
+2026-06-18 23:52:25 | INFO     | server.app:log_requests:68 | GET /chat/history → 200 (0.00s)
+2026-06-18 23:52:27 | INFO     | server.app:log_requests:68 | GET /email/drafts/draft_1781797934423 → 200 (0.00s)
+2026-06-18 23:52:27 | INFO     | server.routes.email_data:delete_draft:88 | 删除草稿: draft_1781797934423
+2026-06-18 23:52:27 | INFO     | server.app:log_requests:68 | DELETE /email/drafts/draft_1781797934423 → 200 (0.00s)
+2026-06-18 23:52:27 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/5ec79ff0-7a00-4a8d-9ae6-a150aaf3fbea → 200 (0.00s)
+2026-06-18 23:52:27 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/5ec79ff0-7a00-4a8d-9ae6-a150aaf3fbea → 200 (0.00s)
+2026-06-18 23:52:27 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:52:27 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:52:32 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 23:52:32 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封订单确认邮件，感谢客户购买 (等待中: 0)
+2026-06-18 23:52:32 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:0.5b, 模式: email
+2026-06-18 23:52:32 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封订单确认邮件，感谢客户购买, 模式: email
+2026-06-18 23:52:32 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.02s)
+2026-06-18 23:52:33 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封订单确认邮件，感谢客户购买
+2026-06-18 23:54:25 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-18 23:54:25 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-18 23:54:28 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-18 23:54:28 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-18 23:54:28 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-18 23:54:28 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-18 23:54:30 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-18 23:54:30 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-18 23:54:30 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-18 23:54:30 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-18 23:54:30 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-18 23:54:33 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/37bd4671-b175-4847-ac51-9ee346c2a462 → 200 (0.00s)
+2026-06-18 23:54:33 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/37bd4671-b175-4847-ac51-9ee346c2a462 → 200 (0.00s)
+2026-06-18 23:54:33 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-18 23:54:33 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-18 23:54:33 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-18 23:54:33 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-18 23:54:33 | INFO     | agent.core:__init__:75 | 已加载用户设置覆盖
+2026-06-18 23:54:33 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-18 23:54:33 | INFO     | agent.core:__init__:84 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-18 23:54:33 | INFO     | agent.core:__init__:75 | 已加载用户设置覆盖
+2026-06-18 23:54:33 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-18 23:54:33 | INFO     | agent.core:__init__:84 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-18 23:54:33 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/37bd4671-b175-4847-ac51-9ee346c2a462 → 200 (0.02s)
+2026-06-18 23:54:33 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/37bd4671-b175-4847-ac51-9ee346c2a462 → 200 (0.02s)
+2026-06-18 23:54:35 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [email] 启用工具: ['send_email']
+2026-06-18 23:54:35 | INFO     | agent.core:switch_mode:129 | 切换模式: email → qwen2.5:0.5b
+2026-06-18 23:54:35 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 23:54:35 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封订单确认邮件，感谢客户购买 (等待中: 0)
+2026-06-18 23:54:35 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:0.5b, 模式: email
+2026-06-18 23:54:35 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封订单确认邮件，感谢客户购买, 模式: email
+2026-06-18 23:54:35 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.02s)
+2026-06-18 23:54:37 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封订单确认邮件，感谢客户购买
+2026-06-18 23:55:16 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-18 23:55:16 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-18 23:55:18 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-18 23:55:18 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-18 23:55:18 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-18 23:55:18 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-18 23:55:20 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-18 23:55:20 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-18 23:55:20 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-18 23:55:20 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-18 23:55:20 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-18 23:55:42 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-18 23:55:42 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-18 23:55:42 | INFO     | agent.core:__init__:75 | 已加载用户设置覆盖
+2026-06-18 23:55:42 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-18 23:55:42 | INFO     | agent.core:__init__:84 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-18 23:55:42 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 给123发一个qq邮件，主题是请假 (等待中: 0)
+2026-06-18 23:55:42 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [email] 启用工具: ['send_email']
+2026-06-18 23:55:42 | INFO     | agent.core:switch_mode:129 | 切换模式: email → qwen2.5:0.5b
+2026-06-18 23:55:42 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:0.5b, 模式: email
+2026-06-18 23:55:42 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 给123发一个qq邮件，主题是请假, 模式: email
+2026-06-18 23:55:42 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.04s)
+2026-06-18 23:55:44 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 给123发一个qq邮件，主题是请假
+2026-06-18 23:56:07 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 我说的是qq邮件 (等待中: 0)
+2026-06-18 23:56:07 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:0.5b, 模式: email
+2026-06-18 23:56:07 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 我说的是qq邮件, 模式: email
+2026-06-18 23:56:07 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 23:56:09 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 我说的是qq邮件
+2026-06-18 23:56:25 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 不是example，是qq (等待中: 0)
+2026-06-18 23:56:25 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:0.5b, 模式: email
+2026-06-18 23:56:25 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 不是example，是qq, 模式: email
+2026-06-18 23:56:25 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 23:56:26 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 不是example，是qq
+2026-06-18 23:57:11 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-18 23:57:11 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-18 23:57:13 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-18 23:57:13 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-18 23:57:13 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-18 23:57:13 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-18 23:57:15 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-18 23:57:15 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-18 23:57:15 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-18 23:57:15 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-18 23:57:15 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-18 23:57:21 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 403 (0.00s)
+2026-06-18 23:57:21 | INFO     | server.app:log_requests:68 | GET /settings → 200 (0.00s)
+2026-06-18 23:57:21 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:57:21 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:57:21 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-18 23:57:21 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-18 23:57:21 | INFO     | agent.core:__init__:75 | 已加载用户设置覆盖
+2026-06-18 23:57:21 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-18 23:57:21 | INFO     | agent.core:__init__:84 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-18 23:57:21 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.01s)
+2026-06-18 23:57:22 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [email] 启用工具: ['send_email']
+2026-06-18 23:57:22 | INFO     | agent.core:switch_mode:129 | 切换模式: email → llama3.2:latest
+2026-06-18 23:57:22 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-18 23:57:22 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 23:57:22 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:57:22 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:57:22 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:57:22 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:57:22 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-18 23:57:22 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-18 23:57:25 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 23:57:25 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封会议取消通知邮件 (等待中: 0)
+2026-06-18 23:57:25 | INFO     | server.routes.chat:chat:53 | 切换模型: llama3.2:latest, 模式: email
+2026-06-18 23:57:25 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封会议取消通知邮件, 模式: email
+2026-06-18 23:57:25 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.02s)
+2026-06-18 23:57:42 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封会议取消通知邮件
+2026-06-18 23:57:56 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/cbec7009-20ae-48e4-b17c-2e2787e2a454 → 200 (0.00s)
+2026-06-18 23:57:56 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/cbec7009-20ae-48e4-b17c-2e2787e2a454 → 200 (0.00s)
+2026-06-18 23:57:56 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/cbec7009-20ae-48e4-b17c-2e2787e2a454 → 200 (0.00s)
+2026-06-18 23:57:56 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/cbec7009-20ae-48e4-b17c-2e2787e2a454 → 200 (0.00s)
+2026-06-18 23:58:12 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-18 23:58:12 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-18 23:58:15 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-18 23:58:15 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-18 23:58:15 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-18 23:58:15 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-18 23:58:17 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-18 23:58:17 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-18 23:58:17 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-18 23:58:17 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-18 23:58:17 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-18 23:58:20 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-18 23:58:20 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-18 23:58:20 | INFO     | agent.core:__init__:75 | 已加载用户设置覆盖
+2026-06-18 23:58:20 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-18 23:58:20 | INFO     | agent.core:__init__:84 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-18 23:58:20 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [email] 启用工具: ['send_email']
+2026-06-18 23:58:20 | INFO     | agent.core:switch_mode:129 | 切换模式: email → qwen2.5:3b
+2026-06-18 23:58:20 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.01s)
+2026-06-18 23:58:20 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封公司搬家通知邮件 (等待中: 0)
+2026-06-18 23:58:20 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b, 模式: email
+2026-06-18 23:58:20 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封公司搬家通知邮件, 模式: email
+2026-06-18 23:58:20 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 23:58:26 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封公司搬家通知邮件
+2026-06-18 23:58:31 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 403 (0.00s)
+2026-06-18 23:58:31 | INFO     | server.app:log_requests:68 | GET /settings → 200 (0.00s)
+2026-06-18 23:58:31 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:58:31 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:58:31 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 23:58:32 | INFO     | agent.core:_apply_mode_tools:115 | 模式 [email] 启用工具: ['send_email']
+2026-06-18 23:58:32 | INFO     | agent.core:switch_mode:129 | 切换模式: email → qwen2.5:3b
+2026-06-18 23:58:32 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-18 23:58:32 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:58:32 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-18 23:58:32 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:58:32 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-18 23:58:32 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-18 23:58:32 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-18 23:58:32 | INFO     | server.app:log_requests:68 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-18 23:58:34 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-18 23:58:34 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一封公司搬家通知邮件 (等待中: 0)
+2026-06-18 23:58:34 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b, 模式: email
+2026-06-18 23:58:34 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一封公司搬家通知邮件, 模式: email
+2026-06-18 23:58:34 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-18 23:58:35 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一封公司搬家通知邮件

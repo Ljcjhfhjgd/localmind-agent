@@ -1,0 +1,1018 @@
+2026-06-16 00:00:46 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-16 00:00:46 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-16 00:00:48 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-16 00:00:48 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-16 00:00:48 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-16 00:00:48 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-16 00:00:50 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-16 00:00:50 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-16 00:00:50 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.pth (94.0 MB)
+2026-06-16 00:00:50 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-16 00:00:50 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-16 00:01:00 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-16 00:01:00 | INFO     | tools.system.tool:on_mount:106 | RememberTool 已挂载 agent
+2026-06-16 00:01:00 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'read_file', 'write_file', 'list_files', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-16 00:01:00 | INFO     | agent.core:__init__:67 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-16 00:01:00 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 00:01:00 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:01:00 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:01:00 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:01:02 | INFO     | server.app:log_requests:48 | GET /settings → 200 (0.00s)
+2026-06-16 00:01:02 | INFO     | server.app:log_requests:48 | GET /memory/list → 200 (0.00s)
+2026-06-16 00:01:11 | INFO     | server.app:log_requests:48 | GET /memory/list → 200 (0.00s)
+2026-06-16 00:01:33 | INFO     | server.app:log_requests:48 | POST /settings → 200 (0.00s)
+2026-06-16 00:01:37 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'read_file', 'write_file']
+2026-06-16 00:01:37 | INFO     | agent.core:switch_mode:114 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-16 00:01:37 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:01:37 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:01:38 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [rag] 启用工具: ['rag_search']
+2026-06-16 00:01:38 | INFO     | agent.core:switch_mode:114 | 切换模式: rag → qwen2.5:3b-instruct
+2026-06-16 00:01:38 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:01:38 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:01:38 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-16 00:01:38 | INFO     | server.app:log_requests:48 | GET /rag/collections → 200 (0.01s)
+2026-06-16 00:01:38 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [xray] 启用工具: ['xray_diagnose']
+2026-06-16 00:01:38 | INFO     | agent.core:switch_mode:114 | 切换模式: xray → qwen2.5:3b-instruct
+2026-06-16 00:01:38 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:01:38 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:01:38 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:01:38 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:01:38 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 00:01:38 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 00:01:38 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:01:38 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:01:38 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:01:38 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:01:38 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:01:38 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:01:38 | INFO     | server.app:log_requests:48 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-16 00:01:38 | INFO     | server.app:log_requests:48 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-16 00:01:39 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:01:39 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:01:40 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'read_file', 'write_file', 'list_files', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-16 00:01:40 | INFO     | agent.core:switch_mode:114 | 切换模式: normal → qwen2.5:3b-instruct
+2026-06-16 00:01:40 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:01:40 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:01:42 | INFO     | server.app:log_requests:48 | GET /memory/list → 200 (0.00s)
+2026-06-16 00:01:42 | INFO     | server.app:log_requests:48 | GET /settings → 200 (0.00s)
+2026-06-16 00:01:51 | INFO     | server.app:log_requests:48 | GET /settings → 200 (0.00s)
+2026-06-16 00:01:51 | INFO     | server.app:log_requests:48 | GET /memory/list → 200 (0.00s)
+2026-06-16 00:01:57 | INFO     | server.app:log_requests:48 | POST /settings → 200 (0.00s)
+2026-06-16 00:06:04 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:04 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:06:04 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:04 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:06:08 | INFO     | server.app:log_requests:48 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-16 00:06:08 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 帮我写一个通知 (等待中: 0)
+2026-06-16 00:06:08 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: normal
+2026-06-16 00:06:08 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 帮我写一个通知, 模式: normal
+2026-06-16 00:06:08 | INFO     | server.app:log_requests:48 | POST /chat → 200 (0.02s)
+2026-06-16 00:06:12 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:15 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 帮我写一个通知
+2026-06-16 00:06:15 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:34 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 如何让通知更有吸引力？ (等待中: 0)
+2026-06-16 00:06:34 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: normal
+2026-06-16 00:06:34 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 如何让通知更有吸引力？, 模式: normal
+2026-06-16 00:06:34 | INFO     | server.app:log_requests:48 | POST /chat → 200 (0.01s)
+2026-06-16 00:06:39 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 如何让通知更有吸引力？
+2026-06-16 00:06:39 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:43 | INFO     | server.app:log_requests:48 | OPTIONS /chat/conversations/e6f2dc7b-0c89-4b59-abe9-0a793e0a2cbe → 200 (0.00s)
+2026-06-16 00:06:43 | INFO     | server.app:log_requests:48 | DELETE /chat/conversations/e6f2dc7b-0c89-4b59-abe9-0a793e0a2cbe → 200 (0.00s)
+2026-06-16 00:06:43 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:44 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:44 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'read_file', 'write_file']
+2026-06-16 00:06:44 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:44 | INFO     | agent.core:switch_mode:114 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-16 00:06:44 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:44 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:44 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:44 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [rag] 启用工具: ['rag_search']
+2026-06-16 00:06:44 | INFO     | agent.core:switch_mode:114 | 切换模式: rag → qwen2.5:3b-instruct
+2026-06-16 00:06:44 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:44 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:44 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:44 | INFO     | server.app:log_requests:48 | GET /rag/collections → 200 (0.00s)
+2026-06-16 00:06:45 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:45 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [xray] 启用工具: ['xray_diagnose']
+2026-06-16 00:06:45 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:45 | INFO     | agent.core:switch_mode:114 | 切换模式: xray → qwen2.5:3b-instruct
+2026-06-16 00:06:45 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:45 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:45 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:45 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:46 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:46 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 00:06:46 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 00:06:46 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:46 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:46 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:06:46 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:46 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:06:46 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:06:46 | INFO     | server.app:log_requests:48 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-16 00:06:46 | INFO     | server.app:log_requests:48 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-16 00:06:46 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:06:47 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:47 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:47 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:47 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:47 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:47 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 00:06:47 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:47 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 00:06:47 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:47 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:47 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:06:47 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:06:48 | INFO     | server.app:log_requests:48 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-16 00:06:48 | INFO     | server.app:log_requests:48 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-16 00:06:48 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:06:48 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:06:48 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:48 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'read_file', 'write_file', 'list_files', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-16 00:06:48 | INFO     | agent.core:switch_mode:114 | 切换模式: normal → qwen2.5:3b-instruct
+2026-06-16 00:06:48 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:48 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:48 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:49 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:49 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'read_file', 'write_file']
+2026-06-16 00:06:49 | INFO     | agent.core:switch_mode:114 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-16 00:06:49 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:49 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:49 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:50 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:50 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [rag] 启用工具: ['rag_search']
+2026-06-16 00:06:50 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:50 | INFO     | agent.core:switch_mode:114 | 切换模式: rag → qwen2.5:3b-instruct
+2026-06-16 00:06:50 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:50 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:50 | INFO     | server.app:log_requests:48 | GET /rag/collections → 200 (0.00s)
+2026-06-16 00:06:50 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:50 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [xray] 启用工具: ['xray_diagnose']
+2026-06-16 00:06:50 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:50 | INFO     | agent.core:switch_mode:114 | 切换模式: xray → qwen2.5:3b-instruct
+2026-06-16 00:06:50 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:50 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:50 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:50 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:51 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:51 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 00:06:51 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:51 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 00:06:51 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:51 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:51 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:06:51 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:06:51 | INFO     | server.app:log_requests:48 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-16 00:06:51 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:06:51 | INFO     | server.app:log_requests:48 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-16 00:06:51 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:06:51 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:51 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:51 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:51 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:52 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:52 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'read_file', 'write_file', 'list_files', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-16 00:06:52 | INFO     | agent.core:switch_mode:114 | 切换模式: normal → qwen2.5:3b-instruct
+2026-06-16 00:06:52 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:52 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:52 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:53 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:53 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'read_file', 'write_file']
+2026-06-16 00:06:53 | INFO     | agent.core:switch_mode:114 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-16 00:06:53 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:53 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:53 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:54 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:54 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:54 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'read_file', 'write_file', 'list_files', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-16 00:06:54 | INFO     | agent.core:switch_mode:114 | 切换模式: normal → qwen2.5:3b-instruct
+2026-06-16 00:06:54 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:54 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:56 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'read_file', 'write_file']
+2026-06-16 00:06:56 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:56 | INFO     | agent.core:switch_mode:114 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-16 00:06:56 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:56 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:56 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:56 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:56 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [rag] 启用工具: ['rag_search']
+2026-06-16 00:06:56 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:56 | INFO     | agent.core:switch_mode:114 | 切换模式: rag → qwen2.5:3b-instruct
+2026-06-16 00:06:56 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:56 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:56 | INFO     | server.app:log_requests:48 | GET /rag/collections → 200 (0.00s)
+2026-06-16 00:06:57 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [xray] 启用工具: ['xray_diagnose']
+2026-06-16 00:06:57 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:57 | INFO     | agent.core:switch_mode:114 | 切换模式: xray → qwen2.5:3b-instruct
+2026-06-16 00:06:57 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:57 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:57 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:57 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:57 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:58 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:58 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 00:06:58 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 00:06:58 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:58 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:58 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:58 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:06:58 | INFO     | server.app:log_requests:48 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-16 00:06:58 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:06:58 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:06:58 | INFO     | server.app:log_requests:48 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-16 00:06:58 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:06:58 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:58 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:58 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:58 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:59 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:59 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [xray] 启用工具: ['xray_diagnose']
+2026-06-16 00:06:59 | INFO     | agent.core:switch_mode:114 | 切换模式: xray → qwen2.5:3b-instruct
+2026-06-16 00:06:59 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:59 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:59 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:59 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:59 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:06:59 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:06:59 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'read_file', 'write_file', 'list_files', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-16 00:06:59 | INFO     | agent.core:switch_mode:114 | 切换模式: normal → qwen2.5:3b-instruct
+2026-06-16 00:06:59 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:06:59 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:06:59 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:07:02 | INFO     | server.app:log_requests:48 | GET /memory/list → 200 (0.00s)
+2026-06-16 00:07:02 | INFO     | server.app:log_requests:48 | GET /settings → 200 (0.00s)
+2026-06-16 00:07:52 | INFO     | server.app:log_requests:48 | GET /settings → 200 (0.00s)
+2026-06-16 00:07:52 | INFO     | server.app:log_requests:48 | GET /memory/list → 200 (0.00s)
+2026-06-16 00:07:53 | INFO     | server.app:log_requests:48 | POST /settings → 200 (0.00s)
+2026-06-16 00:07:56 | INFO     | server.app:log_requests:48 | POST /settings → 200 (0.00s)
+2026-06-16 00:08:13 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:08:13 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 00:08:13 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:08:13 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 00:08:13 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:08:13 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:08:13 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 00:08:13 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:08:13 | INFO     | server.app:log_requests:48 | GET /chat/prompts/email_polish → 200 (0.00s)
+2026-06-16 00:08:13 | INFO     | server.app:log_requests:48 | GET /chat/prompts/email_rewrite → 200 (0.00s)
+2026-06-16 00:08:13 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:08:13 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:08:17 | INFO     | server.app:log_requests:48 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-16 00:08:17 | INFO     | server.app:log_requests:48 | POST /email/drafts → 200 (0.00s)
+2026-06-16 00:08:17 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:08:17 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:08:18 | INFO     | server.app:log_requests:48 | POST /email/drafts → 200 (0.01s)
+2026-06-16 00:08:18 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:08:18 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:08:18 | INFO     | server.app:log_requests:48 | POST /email/drafts → 200 (0.00s)
+2026-06-16 00:08:18 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:08:18 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:08:19 | INFO     | server.app:log_requests:48 | GET /email/drafts/draft_1781539697387 → 200 (0.00s)
+2026-06-16 00:08:19 | INFO     | server.app:log_requests:48 | GET /chat/history → 200 (0.00s)
+2026-06-16 00:08:19 | INFO     | server.app:log_requests:48 | POST /email/drafts → 200 (0.00s)
+2026-06-16 00:08:19 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:08:19 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:08:19 | INFO     | server.app:log_requests:48 | GET /email/drafts/draft_1781539697387 → 200 (0.00s)
+2026-06-16 00:08:19 | INFO     | server.app:log_requests:48 | OPTIONS /email/drafts/draft_1781539697387 → 200 (0.00s)
+2026-06-16 00:08:19 | INFO     | server.routes.email_data:delete_draft:88 | 删除草稿: draft_1781539697387
+2026-06-16 00:08:19 | INFO     | server.app:log_requests:48 | DELETE /email/drafts/draft_1781539697387 → 200 (0.00s)
+2026-06-16 00:08:19 | INFO     | server.app:log_requests:48 | OPTIONS /chat/conversations/ec13b5bb-5850-44a5-87e7-44fe05aa29d0 → 200 (0.00s)
+2026-06-16 00:08:19 | INFO     | server.app:log_requests:48 | DELETE /chat/conversations/ec13b5bb-5850-44a5-87e7-44fe05aa29d0 → 200 (0.00s)
+2026-06-16 00:08:19 | INFO     | server.app:log_requests:48 | GET /email/drafts → 200 (0.00s)
+2026-06-16 00:08:19 | INFO     | server.app:log_requests:48 | GET /email/sent → 200 (0.00s)
+2026-06-16 00:10:19 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 00:10:19 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'read_file', 'write_file', 'list_files', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-16 00:10:19 | INFO     | server.app:log_requests:48 | POST /chat/stop → 200 (0.00s)
+2026-06-16 00:10:19 | INFO     | agent.core:switch_mode:114 | 切换模式: normal → qwen2.5:3b-instruct
+2026-06-16 00:10:19 | INFO     | server.app:log_requests:48 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-16 00:10:19 | INFO     | server.app:log_requests:48 | GET /chat/conversations → 200 (0.00s)
+2026-06-16 12:52:26 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-16 12:52:26 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-16 12:52:29 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-16 12:52:29 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-16 12:52:29 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-16 12:52:29 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-16 12:52:31 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-16 12:52:31 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-16 12:52:31 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.pth (94.0 MB)
+2026-06-16 12:52:31 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-16 12:52:31 | INFO     | __main__:start_server:168 | 鉴权状态: 🔒 已启用
+2026-06-16 12:53:06 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 403 (0.01s)
+2026-06-16 12:53:06 | INFO     | server.app:log_requests:88 | OPTIONS /email/drafts → 403 (0.01s)
+2026-06-16 12:53:06 | INFO     | server.app:log_requests:88 | OPTIONS /email/sent → 403 (0.01s)
+2026-06-16 12:53:06 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 403 (0.01s)
+2026-06-16 12:53:07 | INFO     | server.app:log_requests:88 | OPTIONS /settings → 403 (0.01s)
+2026-06-16 12:53:07 | INFO     | server.app:log_requests:88 | OPTIONS /memory/list → 403 (0.01s)
+2026-06-16 12:53:14 | INFO     | server.app:log_requests:88 | OPTIONS /memory/list → 403 (0.01s)
+2026-06-16 12:53:29 | INFO     | server.app:log_requests:88 | OPTIONS /memory/list → 403 (0.01s)
+2026-06-16 12:53:30 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations/new → 403 (0.01s)
+2026-06-16 12:53:32 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations/new → 403 (0.01s)
+2026-06-16 12:53:40 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations/new → 403 (0.01s)
+2026-06-16 12:53:45 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations/new → 403 (0.01s)
+2026-06-16 12:53:46 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations/new → 403 (0.01s)
+2026-06-16 12:53:47 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations/new → 403 (0.01s)
+2026-06-16 12:53:48 | INFO     | server.app:log_requests:88 | OPTIONS /settings → 403 (0.01s)
+2026-06-16 12:53:48 | INFO     | server.app:log_requests:88 | OPTIONS /memory/list → 403 (0.01s)
+2026-06-16 12:54:55 | INFO     | server.app:log_requests:88 | OPTIONS /settings → 403 (0.01s)
+2026-06-16 12:55:00 | INFO     | server.app:log_requests:88 | OPTIONS /settings → 403 (0.07s)
+2026-06-16 12:55:03 | INFO     | server.app:log_requests:88 | OPTIONS /settings → 403 (0.01s)
+2026-06-16 12:55:06 | INFO     | server.app:log_requests:88 | OPTIONS /settings → 403 (0.01s)
+2026-06-16 12:55:12 | INFO     | server.app:log_requests:88 | OPTIONS /settings → 403 (0.01s)
+2026-06-16 12:58:08 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 403 (0.01s)
+2026-06-16 12:58:08 | INFO     | server.app:log_requests:88 | OPTIONS /email/drafts → 403 (0.01s)
+2026-06-16 12:58:08 | INFO     | server.app:log_requests:88 | OPTIONS /email/sent → 403 (0.01s)
+2026-06-16 12:58:08 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 403 (0.01s)
+2026-06-16 12:58:55 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-16 12:58:55 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-16 12:58:58 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-16 12:58:58 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-16 12:58:58 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-16 12:58:58 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-16 12:59:00 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-16 12:59:00 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-16 12:59:00 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.pth (94.0 MB)
+2026-06-16 12:59:00 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-16 12:59:00 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-16 12:59:03 | INFO     | server.app:log_requests:88 | OPTIONS /email/sent → 200 (0.02s)
+2026-06-16 12:59:03 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.02s)
+2026-06-16 12:59:03 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.01s)
+2026-06-16 12:59:03 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-16 12:59:03 | INFO     | tools.system.tool:on_mount:106 | RememberTool 已挂载 agent
+2026-06-16 12:59:03 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'read_file', 'write_file', 'list_files', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-16 12:59:03 | INFO     | agent.core:__init__:67 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-16 12:59:03 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.02s)
+2026-06-16 12:59:03 | INFO     | server.app:log_requests:88 | OPTIONS /email/drafts → 200 (0.02s)
+2026-06-16 12:59:03 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.03s)
+2026-06-16 12:59:03 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.03s)
+2026-06-16 12:59:03 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.01s)
+2026-06-16 12:59:03 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 12:59:03 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.02s)
+2026-06-16 12:59:03 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.02s)
+2026-06-16 12:59:03 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.02s)
+2026-06-16 12:59:03 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 12:59:03 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 12:59:03 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.02s)
+2026-06-16 12:59:03 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.02s)
+2026-06-16 12:59:04 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations/new → 200 (0.07s)
+2026-06-16 12:59:04 | INFO     | server.app:log_requests:88 | POST /chat/conversations/new → 200 (0.01s)
+2026-06-16 12:59:04 | INFO     | server.app:log_requests:88 | OPTIONS /chat → 200 (0.01s)
+2026-06-16 12:59:04 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 推荐提升审美的方法 (等待中: 0)
+2026-06-16 12:59:04 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: normal
+2026-06-16 12:59:04 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 推荐提升审美的方法, 模式: normal
+2026-06-16 12:59:04 | INFO     | server.app:log_requests:88 | POST /chat → 200 (0.02s)
+2026-06-16 12:59:09 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 12:59:12 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 推荐提升审美的方法
+2026-06-16 12:59:12 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 12:59:15 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations/098ba32f-7004-47d8-9e5c-36340b38e9da → 200 (0.01s)
+2026-06-16 12:59:15 | INFO     | server.app:log_requests:88 | DELETE /chat/conversations/098ba32f-7004-47d8-9e5c-36340b38e9da → 200 (0.01s)
+2026-06-16 12:59:15 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 12:59:20 | INFO     | server.app:log_requests:88 | OPTIONS /settings → 200 (0.02s)
+2026-06-16 12:59:20 | INFO     | server.app:log_requests:88 | OPTIONS /memory/list → 200 (0.01s)
+2026-06-16 12:59:20 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.02s)
+2026-06-16 12:59:20 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)
+2026-06-16 12:59:37 | INFO     | server.app:log_requests:88 | POST /settings → 200 (0.02s)
+2026-06-16 12:59:41 | INFO     | server.app:log_requests:88 | POST /chat/conversations/new → 200 (0.01s)
+2026-06-16 12:59:41 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 推荐提升审美的方法 (等待中: 0)
+2026-06-16 12:59:41 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: normal
+2026-06-16 12:59:41 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 推荐提升审美的方法, 模式: normal
+2026-06-16 12:59:41 | INFO     | server.app:log_requests:88 | POST /chat → 200 (0.02s)
+2026-06-16 12:59:42 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 12:59:44 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 推荐提升审美的方法
+2026-06-16 12:59:44 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 13:00:42 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.04s)
+2026-06-16 13:00:42 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.02s)
+2026-06-16 13:01:07 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 13:01:07 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)
+2026-06-16 13:01:09 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)
+2026-06-16 13:02:26 | INFO     | server.app:log_requests:88 | OPTIONS /chat/stop → 200 (0.02s)
+2026-06-16 13:02:26 | INFO     | server.app:log_requests:88 | OPTIONS /chat/mode/switch → 200 (0.01s)
+2026-06-16 13:02:26 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 13:02:26 | INFO     | server.app:log_requests:88 | POST /chat/stop → 200 (0.02s)
+2026-06-16 13:02:26 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'read_file', 'write_file']
+2026-06-16 13:02:26 | INFO     | agent.core:switch_mode:114 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-16 13:02:26 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.02s)
+2026-06-16 13:02:26 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.01s)
+2026-06-16 13:02:26 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 13:02:41 | INFO     | server.app:log_requests:88 | POST /chat/conversations/new → 200 (0.01s)
+2026-06-16 13:02:41 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 写一个python文件，存到本地 (等待中: 0)
+2026-06-16 13:02:41 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: agent
+2026-06-16 13:02:41 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 写一个python文件，存到本地, 模式: agent
+2026-06-16 13:02:41 | INFO     | server.app:log_requests:88 | POST /chat → 200 (0.02s)
+2026-06-16 13:02:42 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 13:02:47 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 写一个python文件，存到本地
+2026-06-16 13:02:47 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 13:04:28 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations/35a63e53-6e8d-4839-9aca-a474d4862de8 → 200 (0.01s)
+2026-06-16 13:04:28 | INFO     | server.app:log_requests:88 | DELETE /chat/conversations/35a63e53-6e8d-4839-9aca-a474d4862de8 → 200 (0.01s)
+2026-06-16 13:04:28 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 13:06:09 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 13:06:09 | INFO     | server.app:log_requests:88 | POST /chat/stop → 200 (0.02s)
+2026-06-16 13:06:09 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'read_file', 'write_file', 'list_files', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-16 13:06:09 | INFO     | agent.core:switch_mode:114 | 切换模式: normal → qwen2.5:3b-instruct
+2026-06-16 13:06:09 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 13:06:09 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 13:06:09 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 如何在日常中保持审美？ (等待中: 0)
+2026-06-16 13:06:09 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: normal
+2026-06-16 13:06:09 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 如何在日常中保持审美？, 模式: normal
+2026-06-16 13:06:09 | INFO     | server.app:log_requests:88 | POST /chat → 200 (0.02s)
+2026-06-16 13:06:10 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 13:06:13 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 如何在日常中保持审美？
+2026-06-16 13:06:13 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 13:06:15 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations/0cd92011-654e-4324-9c00-1f26c132b846 → 200 (0.01s)
+2026-06-16 13:06:15 | INFO     | server.app:log_requests:88 | DELETE /chat/conversations/0cd92011-654e-4324-9c00-1f26c132b846 → 200 (0.01s)
+2026-06-16 13:06:15 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:06:06 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-16 14:06:06 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-16 14:06:09 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-16 14:06:09 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-16 14:06:09 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-16 14:06:09 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-16 14:06:11 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-16 14:06:11 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-16 14:06:11 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.pth (94.0 MB)
+2026-06-16 14:06:11 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-16 14:06:11 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-16 14:06:16 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.01s)
+2026-06-16 14:06:16 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-16 14:06:16 | INFO     | tools.system.tool:on_mount:106 | RememberTool 已挂载 agent
+2026-06-16 14:06:16 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'read_file', 'write_file', 'list_files', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-16 14:06:16 | INFO     | agent.core:__init__:67 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-16 14:06:16 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.02s)
+2026-06-16 14:06:16 | INFO     | server.app:log_requests:88 | OPTIONS /email/drafts → 200 (0.01s)
+2026-06-16 14:06:16 | INFO     | server.app:log_requests:88 | OPTIONS /email/sent → 200 (0.01s)
+2026-06-16 14:06:16 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:06:16 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.01s)
+2026-06-16 14:06:16 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.01s)
+2026-06-16 14:06:19 | INFO     | server.app:log_requests:88 | OPTIONS /settings → 200 (0.02s)
+2026-06-16 14:06:19 | INFO     | server.app:log_requests:88 | OPTIONS /memory/list → 200 (0.01s)
+2026-06-16 14:06:19 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.02s)
+2026-06-16 14:06:19 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)
+2026-06-16 14:06:28 | INFO     | server.app:log_requests:88 | OPTIONS /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:06:28 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [xray] 启用工具: ['xray_diagnose']
+2026-06-16 14:06:28 | INFO     | agent.core:switch_mode:114 | 切换模式: xray → qwen2.5:3b-instruct
+2026-06-16 14:06:28 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:06:28 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.01s)
+2026-06-16 14:06:29 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:06:29 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:06:29 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.09s)
+2026-06-16 14:06:51 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 14:06:51 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 14:06:51 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:06:51 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.01s)
+2026-06-16 14:06:51 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.01s)
+2026-06-16 14:06:51 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.01s)
+2026-06-16 14:06:51 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:06:51 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.01s)
+2026-06-16 14:06:51 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.01s)
+2026-06-16 14:06:51 | INFO     | server.app:log_requests:88 | OPTIONS /chat/prompts/email_polish → 200 (0.01s)
+2026-06-16 14:06:51 | INFO     | server.app:log_requests:88 | OPTIONS /chat/prompts/email_rewrite → 200 (0.01s)
+2026-06-16 14:06:51 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_polish → 200 (0.01s)
+2026-06-16 14:06:51 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_rewrite → 200 (0.01s)
+2026-06-16 14:06:52 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'read_file', 'write_file', 'list_files', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-16 14:06:52 | INFO     | agent.core:switch_mode:114 | 切换模式: normal → qwen2.5:3b-instruct
+2026-06-16 14:06:52 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:06:52 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:06:53 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 14:06:53 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 14:06:53 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:06:53 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.05s)
+2026-06-16 14:06:54 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.04s)
+2026-06-16 14:06:54 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.04s)
+2026-06-16 14:06:54 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_polish → 200 (0.02s)
+2026-06-16 14:06:54 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_rewrite → 200 (0.04s)
+2026-06-16 14:06:54 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.02s)
+2026-06-16 14:06:54 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.01s)
+2026-06-16 14:07:03 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:07:03 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.01s)
+2026-06-16 14:07:03 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:07:03 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [xray] 启用工具: ['xray_diagnose']
+2026-06-16 14:07:03 | INFO     | agent.core:switch_mode:114 | 切换模式: xray → qwen2.5:3b-instruct
+2026-06-16 14:07:03 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:07:03 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:07:04 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [xray] 启用工具: ['xray_diagnose']
+2026-06-16 14:07:04 | INFO     | agent.core:switch_mode:114 | 切换模式: xray → qwen2.5:3b-instruct
+2026-06-16 14:07:04 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.02s)
+2026-06-16 14:07:04 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:07:04 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.02s)
+2026-06-16 14:07:04 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:07:28 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations/new → 200 (0.01s)
+2026-06-16 14:07:28 | INFO     | server.app:log_requests:88 | POST /chat/conversations/new → 200 (0.02s)
+2026-06-16 14:07:28 | INFO     | server.app:log_requests:88 | OPTIONS /chat → 200 (0.01s)
+2026-06-16 14:07:28 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求:  (等待中: 0)
+2026-06-16 14:07:28 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: xray
+2026-06-16 14:07:28 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: , 模式: xray
+2026-06-16 14:07:28 | INFO     | server.app:log_requests:88 | POST /chat → 200 (0.06s)
+2026-06-16 14:07:30 | INFO     | agent.core:_load_ood_encoder:890 | OOD编码器加载成功
+2026-06-16 14:07:30 | INFO     | agent.core:_contrastive_ood_check:845 | OOD距离: 17.87, 阈值: 20.5
+2026-06-16 14:07:31 | INFO     | tools.xray.model:load:115 | 胸片模型已加载: cpu
+2026-06-16 14:07:31 | INFO     | agent.core:_step_xray_diagnose:441 | 胸片 [00000003_000.png] 诊断完成
+2026-06-16 14:07:31 | INFO     | agent.core:_contrastive_ood_check:845 | OOD距离: 15.63, 阈值: 20.5
+2026-06-16 14:07:31 | INFO     | agent.core:_step_xray_diagnose:441 | 胸片 [00000013_034.png] 诊断完成
+2026-06-16 14:07:31 | INFO     | agent.core:_contrastive_ood_check:845 | OOD距离: 17.07, 阈值: 20.5
+2026-06-16 14:07:32 | INFO     | agent.core:_step_xray_diagnose:441 | 胸片 [00000001_002.png] 诊断完成
+2026-06-16 14:07:32 | INFO     | agent.core:_contrastive_ood_check:845 | OOD距离: 16.69, 阈值: 20.5
+2026-06-16 14:07:32 | INFO     | agent.core:_step_xray_diagnose:441 | 胸片 [00000002_000.png] 诊断完成
+2026-06-16 14:07:32 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 
+2026-06-16 14:07:32 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:07:33 | INFO     | server.app:log_requests:88 | POST /chat/xray/report → 200 (0.02s)
+2026-06-16 14:07:44 | INFO     | agent.core:generate_xray_report:533 | 胸片报告已缓存: 00000003_000.png
+2026-06-16 14:08:01 | INFO     | server.app:log_requests:88 | POST /chat/xray/report → 200 (0.03s)
+2026-06-16 14:08:07 | INFO     | agent.core:generate_xray_report:533 | 胸片报告已缓存: 00000013_034.png
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | OPTIONS /chat/stop → 200 (0.02s)
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | OPTIONS /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:26:44 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | POST /chat/stop → 200 (0.02s)
+2026-06-16 14:26:44 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 14:26:44 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.02s)
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | OPTIONS /email/drafts → 200 (0.01s)
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | OPTIONS /email/sent → 200 (0.02s)
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | OPTIONS /chat/prompts/email_polish → 200 (0.01s)
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | OPTIONS /chat/prompts/email_rewrite → 200 (0.02s)
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.02s)
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.01s)
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | OPTIONS /email/sent → 200 (0.02s)
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.02s)
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_polish → 200 (0.01s)
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_rewrite → 200 (0.02s)
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.03s)
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.02s)
+2026-06-16 14:26:44 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | POST /chat/stop → 200 (0.02s)
+2026-06-16 14:26:44 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'read_file', 'write_file']
+2026-06-16 14:26:44 | INFO     | agent.core:switch_mode:114 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.02s)
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.01s)
+2026-06-16 14:26:44 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:26:45 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 14:26:45 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'read_file', 'write_file']
+2026-06-16 14:26:45 | INFO     | server.app:log_requests:88 | POST /chat/stop → 200 (0.03s)
+2026-06-16 14:26:45 | INFO     | agent.core:switch_mode:114 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-16 14:26:45 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.02s)
+2026-06-16 14:26:45 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:26:47 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 14:26:47 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'read_file', 'write_file', 'list_files', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-16 14:26:47 | INFO     | agent.core:switch_mode:114 | 切换模式: normal → qwen2.5:3b-instruct
+2026-06-16 14:26:47 | INFO     | server.app:log_requests:88 | POST /chat/stop → 200 (0.03s)
+2026-06-16 14:26:47 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.02s)
+2026-06-16 14:26:47 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.01s)
+2026-06-16 14:26:47 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:26:53 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations/new → 200 (0.01s)
+2026-06-16 14:26:53 | INFO     | server.app:log_requests:88 | POST /chat/conversations/new → 200 (0.01s)
+2026-06-16 14:26:53 | INFO     | server.app:log_requests:88 | OPTIONS /chat → 200 (0.01s)
+2026-06-16 14:26:53 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 什么是Agent？ (等待中: 0)
+2026-06-16 14:26:53 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: normal
+2026-06-16 14:26:53 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 什么是Agent？, 模式: normal
+2026-06-16 14:26:53 | INFO     | server.app:log_requests:88 | POST /chat → 200 (0.03s)
+2026-06-16 14:26:58 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:27:02 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 什么是Agent？
+2026-06-16 14:27:02 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:27:03 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 有哪些实际应用案例？ (等待中: 0)
+2026-06-16 14:27:03 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: normal
+2026-06-16 14:27:03 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 有哪些实际应用案例？, 模式: normal
+2026-06-16 14:27:03 | INFO     | server.app:log_requests:88 | POST /chat → 200 (0.04s)
+2026-06-16 14:27:08 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 有哪些实际应用案例？
+2026-06-16 14:27:08 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:27:09 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 在客户需要时提供帮助或解答问题。 (等待中: 0)
+2026-06-16 14:27:09 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: normal
+2026-06-16 14:27:09 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 在客户需要时提供帮助或解答问题。, 模式: normal
+2026-06-16 14:27:09 | INFO     | server.app:log_requests:88 | POST /chat → 200 (0.02s)
+2026-06-16 14:27:11 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 在客户需要时提供帮助或解答问题。
+2026-06-16 14:27:11 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:27:16 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations/d5fc5af3-8a13-48b8-b790-700eb87e5833 → 200 (0.01s)
+2026-06-16 14:27:16 | INFO     | server.app:log_requests:88 | DELETE /chat/conversations/d5fc5af3-8a13-48b8-b790-700eb87e5833 → 200 (0.01s)
+2026-06-16 14:27:16 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:29:05 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 14:29:05 | INFO     | server.app:log_requests:88 | POST /chat/stop → 200 (0.02s)
+2026-06-16 14:29:05 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'read_file', 'write_file']
+2026-06-16 14:29:05 | INFO     | agent.core:switch_mode:114 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-16 14:29:05 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:29:05 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:29:08 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 14:29:08 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [rag] 启用工具: ['rag_search']
+2026-06-16 14:29:08 | INFO     | agent.core:switch_mode:114 | 切换模式: rag → qwen2.5:3b-instruct
+2026-06-16 14:29:08 | INFO     | server.app:log_requests:88 | POST /chat/stop → 200 (0.02s)
+2026-06-16 14:29:08 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:29:08 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.01s)
+2026-06-16 14:29:08 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:29:08 | INFO     | server.app:log_requests:88 | OPTIONS /rag/collections → 200 (0.01s)
+2026-06-16 14:29:08 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-16 14:29:08 | INFO     | server.app:log_requests:88 | GET /rag/collections → 200 (0.02s)
+2026-06-16 14:29:10 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 14:29:10 | INFO     | server.app:log_requests:88 | POST /chat/stop → 200 (0.02s)
+2026-06-16 14:29:10 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [xray] 启用工具: ['xray_diagnose']
+2026-06-16 14:29:10 | INFO     | agent.core:switch_mode:114 | 切换模式: xray → qwen2.5:3b-instruct
+2026-06-16 14:29:10 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:29:10 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.02s)
+2026-06-16 14:29:10 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.01s)
+2026-06-16 14:29:10 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:29:10 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:29:11 | INFO     | server.app:log_requests:88 | POST /chat/xray/report → 200 (0.01s)
+2026-06-16 14:29:12 | INFO     | server.app:log_requests:88 | POST /chat/xray/report → 200 (0.02s)
+2026-06-16 14:29:18 | INFO     | agent.core:generate_xray_report:533 | 胸片报告已缓存: 00000001_002.png
+2026-06-16 14:29:20 | INFO     | server.app:log_requests:88 | POST /chat/xray/report → 200 (0.02s)
+2026-06-16 14:29:25 | INFO     | agent.core:generate_xray_report:533 | 胸片报告已缓存: 00000002_000.png
+2026-06-16 14:29:34 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations/ef494ed8-df66-4126-8bf0-59bac767d577 → 200 (0.01s)
+2026-06-16 14:29:34 | INFO     | server.app:log_requests:88 | DELETE /chat/conversations/ef494ed8-df66-4126-8bf0-59bac767d577 → 200 (0.01s)
+2026-06-16 14:29:34 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:29:36 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 14:29:36 | INFO     | server.app:log_requests:88 | POST /chat/stop → 200 (0.01s)
+2026-06-16 14:29:36 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [rag] 启用工具: ['rag_search']
+2026-06-16 14:29:36 | INFO     | agent.core:switch_mode:114 | 切换模式: rag → qwen2.5:3b-instruct
+2026-06-16 14:29:36 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:29:36 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:29:36 | INFO     | server.app:log_requests:88 | GET /rag/collections → 200 (0.01s)
+2026-06-16 14:29:37 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 14:29:37 | INFO     | server.app:log_requests:88 | POST /chat/stop → 200 (0.01s)
+2026-06-16 14:29:37 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'read_file', 'write_file', 'list_files', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-16 14:29:37 | INFO     | agent.core:switch_mode:114 | 切换模式: normal → qwen2.5:3b-instruct
+2026-06-16 14:29:37 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:29:37 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:29:38 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 14:29:38 | INFO     | server.app:log_requests:88 | POST /chat/stop → 200 (0.02s)
+2026-06-16 14:29:38 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'read_file', 'write_file']
+2026-06-16 14:29:38 | INFO     | agent.core:switch_mode:114 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-16 14:29:38 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:29:38 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:29:38 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 14:29:38 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [xray] 启用工具: ['xray_diagnose']
+2026-06-16 14:29:38 | INFO     | server.app:log_requests:88 | POST /chat/stop → 200 (0.02s)
+2026-06-16 14:29:38 | INFO     | agent.core:switch_mode:114 | 切换模式: xray → qwen2.5:3b-instruct
+2026-06-16 14:29:38 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:29:38 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:29:38 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:29:38 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:29:39 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 14:29:39 | INFO     | server.app:log_requests:88 | POST /chat/stop → 200 (0.02s)
+2026-06-16 14:29:39 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 14:29:39 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 14:29:39 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:29:39 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.01s)
+2026-06-16 14:29:39 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.02s)
+2026-06-16 14:29:39 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.02s)
+2026-06-16 14:29:39 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_polish → 200 (0.02s)
+2026-06-16 14:29:39 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.01s)
+2026-06-16 14:29:39 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_rewrite → 200 (0.03s)
+2026-06-16 14:29:39 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.01s)
+2026-06-16 14:29:39 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 14:29:39 | INFO     | server.app:log_requests:88 | POST /chat/stop → 200 (0.02s)
+2026-06-16 14:29:39 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:29:39 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.01s)
+2026-06-16 14:29:39 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:30:31 | INFO     | server.app:log_requests:88 | OPTIONS /settings → 200 (0.02s)
+2026-06-16 14:30:31 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.02s)
+2026-06-16 14:30:31 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 14:30:31 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.02s)
+2026-06-16 14:30:31 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:30:31 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.02s)
+2026-06-16 14:30:43 | INFO     | server.app:log_requests:88 | OPTIONS /memory/list → 200 (0.01s)
+2026-06-16 14:30:43 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 14:30:43 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)
+2026-06-16 14:30:47 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)
+2026-06-16 14:30:56 | INFO     | server.app:log_requests:88 | POST /settings → 200 (0.01s)
+2026-06-16 14:30:56 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 14:30:59 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 14:30:59 | INFO     | server.app:log_requests:88 | POST /chat/stop → 200 (0.01s)
+2026-06-16 14:30:59 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 14:30:59 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 14:30:59 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:31:00 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:31:00 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.01s)
+2026-06-16 14:31:00 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.01s)
+2026-06-16 14:31:00 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_polish → 200 (0.01s)
+2026-06-16 14:31:00 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_rewrite → 200 (0.01s)
+2026-06-16 14:31:00 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.01s)
+2026-06-16 14:31:00 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.01s)
+2026-06-16 14:31:00 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 14:31:00 | INFO     | server.app:log_requests:88 | POST /chat/stop → 200 (0.02s)
+2026-06-16 14:31:00 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'read_file', 'write_file']
+2026-06-16 14:31:00 | INFO     | agent.core:switch_mode:114 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-16 14:31:00 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:31:00 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:31:00 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-16 14:31:00 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'read_file', 'write_file', 'list_files', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-16 14:31:00 | INFO     | agent.core:switch_mode:114 | 切换模式: normal → qwen2.5:3b-instruct
+2026-06-16 14:31:00 | INFO     | server.app:log_requests:88 | POST /chat/stop → 200 (0.02s)
+2026-06-16 14:31:00 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 14:31:00 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:31:01 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.02s)
+2026-06-16 14:31:01 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.02s)
+2026-06-16 14:31:13 | INFO     | server.app:log_requests:88 | POST /settings → 200 (0.01s)
+2026-06-16 14:31:13 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 14:31:17 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.02s)
+2026-06-16 14:31:17 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:31:17 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.02s)
+2026-06-16 14:31:17 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.02s)
+2026-06-16 14:31:17 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:31:18 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:31:18 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.02s)
+2026-06-16 14:31:18 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.02s)
+2026-06-16 14:31:18 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.02s)
+2026-06-16 14:31:18 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 14:31:38 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 14:31:38 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)
+2026-06-16 14:32:03 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 14:32:03 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)
+2026-06-16 14:37:31 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 14:37:31 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)
+2026-06-16 14:37:36 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 14:37:36 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)
+2026-06-16 14:37:45 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)
+2026-06-16 14:37:51 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)
+2026-06-16 22:53:18 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-16 22:53:18 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-16 22:53:20 | INFO     | __main__:check_ollama:51 | Ollama 运行中，16 个模型
+2026-06-16 22:53:20 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-16 22:53:20 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-16 22:53:20 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-16 22:53:22 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-16 22:53:22 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-16 22:53:22 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.pth (94.0 MB)
+2026-06-16 22:53:22 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-16 22:53:22 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-16 22:53:29 | INFO     | server.app:log_requests:88 | OPTIONS /settings → 200 (0.03s)
+2026-06-16 22:53:29 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.01s)
+2026-06-16 22:53:29 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.03s)
+2026-06-16 22:53:29 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-16 22:53:29 | INFO     | tools.system.tool:on_mount:106 | RememberTool 已挂载 agent
+2026-06-16 22:53:29 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'read_file', 'write_file', 'list_files', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-16 22:53:29 | INFO     | agent.core:__init__:67 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-16 22:53:29 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.04s)
+2026-06-16 22:53:29 | INFO     | server.app:log_requests:88 | OPTIONS /email/drafts → 200 (0.02s)
+2026-06-16 22:53:29 | INFO     | server.app:log_requests:88 | OPTIONS /email/sent → 200 (0.01s)
+2026-06-16 22:53:29 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.03s)
+2026-06-16 22:53:29 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.01s)
+2026-06-16 22:53:29 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.01s)
+2026-06-16 22:53:32 | INFO     | server.app:log_requests:88 | OPTIONS /memory/list → 200 (0.02s)
+2026-06-16 22:53:32 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 22:53:32 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)
+2026-06-16 22:53:42 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 22:53:42 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)
+2026-06-16 22:58:13 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 22:58:13 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)
+2026-06-16 22:58:23 | INFO     | server.app:log_requests:88 | POST /settings → 200 (0.10s)
+2026-06-16 22:58:23 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 22:58:25 | INFO     | server.app:log_requests:88 | OPTIONS /chat/mode/switch → 200 (0.01s)
+2026-06-16 22:58:25 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'read_file', 'write_file']
+2026-06-16 22:58:25 | INFO     | agent.core:switch_mode:114 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-16 22:58:25 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 22:58:25 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.01s)
+2026-06-16 22:58:25 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 22:58:25 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'read_file', 'write_file', 'list_files', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-16 22:58:25 | INFO     | agent.core:switch_mode:114 | 切换模式: normal → qwen2.5:3b-instruct
+2026-06-16 22:58:25 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 22:58:26 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 22:58:26 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [rag] 启用工具: ['rag_search']
+2026-06-16 22:58:26 | INFO     | agent.core:switch_mode:114 | 切换模式: rag → qwen2.5:3b-instruct
+2026-06-16 22:58:26 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.02s)
+2026-06-16 22:58:26 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.01s)
+2026-06-16 22:58:26 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 22:58:26 | INFO     | server.app:log_requests:88 | OPTIONS /rag/collections → 200 (0.02s)
+2026-06-16 22:58:26 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-16 22:58:26 | INFO     | server.app:log_requests:88 | GET /rag/collections → 200 (0.02s)
+2026-06-16 22:58:26 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [xray] 启用工具: ['xray_diagnose']
+2026-06-16 22:58:26 | INFO     | agent.core:switch_mode:114 | 切换模式: xray → qwen2.5:3b-instruct
+2026-06-16 22:58:26 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 22:58:26 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.01s)
+2026-06-16 22:58:26 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 22:58:26 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 22:58:26 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 22:58:27 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 22:58:27 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 22:58:27 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 22:58:27 | INFO     | server.app:log_requests:88 | OPTIONS /chat/conversations → 200 (0.02s)
+2026-06-16 22:58:27 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.02s)
+2026-06-16 22:58:27 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.01s)
+2026-06-16 22:58:27 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.03s)
+2026-06-16 22:58:27 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.02s)
+2026-06-16 22:58:27 | INFO     | server.app:log_requests:88 | OPTIONS /chat/prompts/email_polish → 200 (0.01s)
+2026-06-16 22:58:27 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.03s)
+2026-06-16 22:58:27 | INFO     | server.app:log_requests:88 | OPTIONS /chat/prompts/email_rewrite → 200 (0.02s)
+2026-06-16 22:58:27 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_polish → 200 (0.03s)
+2026-06-16 22:58:27 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_rewrite → 200 (0.01s)
+2026-06-16 22:58:28 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'read_file', 'write_file']
+2026-06-16 22:58:28 | INFO     | agent.core:switch_mode:114 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-16 22:58:28 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.02s)
+2026-06-16 22:58:28 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 22:58:29 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.02s)
+2026-06-16 22:58:29 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.02s)
+2026-06-16 22:58:33 | INFO     | server.app:log_requests:88 | POST /settings → 200 (0.01s)
+2026-06-16 22:58:33 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 22:58:48 | INFO     | server.app:log_requests:88 | POST /settings → 200 (0.02s)
+2026-06-16 22:58:48 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 22:58:52 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 22:58:52 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 22:58:52 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.02s)
+2026-06-16 22:58:52 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.04s)
+2026-06-16 22:58:52 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_polish → 200 (0.02s)
+2026-06-16 22:58:52 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.04s)
+2026-06-16 22:58:52 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.04s)
+2026-06-16 22:58:52 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_rewrite → 200 (0.04s)
+2026-06-16 22:58:52 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.03s)
+2026-06-16 22:58:52 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.01s)
+2026-06-16 22:58:53 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [rag] 启用工具: ['rag_search']
+2026-06-16 22:58:53 | INFO     | agent.core:switch_mode:114 | 切换模式: rag → qwen2.5:3b-instruct
+2026-06-16 22:58:53 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 22:58:53 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.02s)
+2026-06-16 22:58:53 | INFO     | server.app:log_requests:88 | GET /rag/collections → 200 (0.01s)
+2026-06-16 22:58:54 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'read_file', 'write_file']
+2026-06-16 22:58:54 | INFO     | agent.core:switch_mode:114 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-16 22:58:54 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 22:58:54 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 22:58:54 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'read_file', 'write_file', 'list_files', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-16 22:58:54 | INFO     | agent.core:switch_mode:114 | 切换模式: normal → qwen2.5:3b-instruct
+2026-06-16 22:58:54 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 22:58:54 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 22:58:54 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [rag] 启用工具: ['rag_search']
+2026-06-16 22:58:54 | INFO     | agent.core:switch_mode:114 | 切换模式: rag → qwen2.5:3b-instruct
+2026-06-16 22:58:54 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.02s)
+2026-06-16 22:58:54 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.02s)
+2026-06-16 22:58:54 | INFO     | server.app:log_requests:88 | GET /rag/collections → 200 (0.01s)
+2026-06-16 22:58:55 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'read_file', 'write_file']
+2026-06-16 22:58:55 | INFO     | agent.core:switch_mode:114 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-16 22:58:55 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 22:58:55 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 22:58:55 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [xray] 启用工具: ['xray_diagnose']
+2026-06-16 22:58:55 | INFO     | agent.core:switch_mode:114 | 切换模式: xray → qwen2.5:3b-instruct
+2026-06-16 22:58:55 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 22:58:55 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 22:58:56 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [xray] 启用工具: ['xray_diagnose']
+2026-06-16 22:58:56 | INFO     | agent.core:switch_mode:114 | 切换模式: xray → qwen2.5:3b-instruct
+2026-06-16 22:58:56 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 22:58:56 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 22:58:56 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 22:58:56 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 22:58:57 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [rag] 启用工具: ['rag_search']
+2026-06-16 22:58:57 | INFO     | agent.core:switch_mode:114 | 切换模式: rag → qwen2.5:3b-instruct
+2026-06-16 22:58:57 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 22:58:57 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.02s)
+2026-06-16 22:58:57 | INFO     | server.app:log_requests:88 | GET /rag/collections → 200 (0.01s)
+2026-06-16 22:58:58 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 22:58:58 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 22:58:58 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 22:58:58 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.05s)
+2026-06-16 22:58:58 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.05s)
+2026-06-16 22:58:58 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_polish → 200 (0.03s)
+2026-06-16 22:58:58 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.05s)
+2026-06-16 22:58:58 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_rewrite → 200 (0.04s)
+2026-06-16 22:58:58 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.02s)
+2026-06-16 22:58:58 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.01s)
+2026-06-16 22:59:00 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.03s)
+2026-06-16 22:59:00 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.03s)
+2026-06-16 22:59:10 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 22:59:10 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.03s)
+2026-06-16 22:59:10 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.03s)
+2026-06-16 22:59:10 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.01s)
+2026-06-16 22:59:10 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 22:59:12 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.02s)
+2026-06-16 22:59:12 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.02s)
+2026-06-16 22:59:15 | INFO     | server.app:log_requests:88 | POST /settings → 200 (0.02s)
+2026-06-16 22:59:15 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 22:59:18 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 22:59:18 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 22:59:18 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 22:59:18 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.02s)
+2026-06-16 22:59:18 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.02s)
+2026-06-16 22:59:18 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_polish → 200 (0.01s)
+2026-06-16 22:59:18 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.02s)
+2026-06-16 22:59:18 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_rewrite → 200 (0.02s)
+2026-06-16 22:59:18 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.01s)
+2026-06-16 22:59:18 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.01s)
+2026-06-16 23:00:33 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.02s)
+2026-06-16 23:00:33 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.03s)
+2026-06-16 23:00:33 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_rewrite → 200 (0.01s)
+2026-06-16 23:00:33 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_polish → 200 (0.02s)
+2026-06-16 23:00:33 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.02s)
+2026-06-16 23:00:33 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.02s)
+2026-06-16 23:00:33 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:00:55 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 23:00:55 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:00:55 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_polish → 200 (0.01s)
+2026-06-16 23:00:55 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_rewrite → 200 (0.01s)
+2026-06-16 23:00:55 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.01s)
+2026-06-16 23:00:55 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.01s)
+2026-06-16 23:00:55 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:01:01 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 23:01:01 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 23:01:01 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 23:01:01 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.04s)
+2026-06-16 23:01:01 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.03s)
+2026-06-16 23:01:01 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_polish → 200 (0.02s)
+2026-06-16 23:01:01 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.03s)
+2026-06-16 23:01:01 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_rewrite → 200 (0.02s)
+2026-06-16 23:01:01 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.01s)
+2026-06-16 23:01:01 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.02s)
+2026-06-16 23:01:03 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)
+2026-06-16 23:01:03 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.02s)
+2026-06-16 23:01:07 | INFO     | server.app:log_requests:88 | POST /settings → 200 (0.01s)
+2026-06-16 23:01:07 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 23:01:09 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [xray] 启用工具: ['xray_diagnose']
+2026-06-16 23:01:09 | INFO     | agent.core:switch_mode:114 | 切换模式: xray → qwen2.5:3b-instruct
+2026-06-16 23:01:09 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 23:01:09 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:01:09 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:01:09 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:01:09 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 23:01:09 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 23:01:09 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 23:01:09 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:01:09 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.01s)
+2026-06-16 23:01:09 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.01s)
+2026-06-16 23:01:09 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_polish → 200 (0.01s)
+2026-06-16 23:01:09 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_rewrite → 200 (0.01s)
+2026-06-16 23:01:09 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.01s)
+2026-06-16 23:01:09 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.01s)
+2026-06-16 23:01:10 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [xray] 启用工具: ['xray_diagnose']
+2026-06-16 23:01:10 | INFO     | agent.core:switch_mode:114 | 切换模式: xray → qwen2.5:3b-instruct
+2026-06-16 23:01:10 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 23:01:10 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:01:10 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:01:10 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:01:11 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 23:01:11 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 23:01:11 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.02s)
+2026-06-16 23:01:11 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.06s)
+2026-06-16 23:01:11 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.06s)
+2026-06-16 23:01:11 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_rewrite → 200 (0.04s)
+2026-06-16 23:01:11 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.05s)
+2026-06-16 23:01:11 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_polish → 200 (0.04s)
+2026-06-16 23:01:11 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.03s)
+2026-06-16 23:01:11 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.02s)
+2026-06-16 23:01:12 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.02s)
+2026-06-16 23:01:12 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.02s)
+2026-06-16 23:01:19 | INFO     | server.app:log_requests:88 | POST /settings → 200 (0.01s)
+2026-06-16 23:01:19 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 23:01:21 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [xray] 启用工具: ['xray_diagnose']
+2026-06-16 23:01:21 | INFO     | agent.core:switch_mode:114 | 切换模式: xray → qwen2.5:3b-instruct
+2026-06-16 23:01:21 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.02s)
+2026-06-16 23:01:21 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:01:21 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:01:21 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:01:21 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [rag] 启用工具: ['rag_search']
+2026-06-16 23:01:21 | INFO     | agent.core:switch_mode:114 | 切换模式: rag → qwen2.5:3b-instruct
+2026-06-16 23:01:21 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.02s)
+2026-06-16 23:01:21 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.03s)
+2026-06-16 23:01:21 | INFO     | server.app:log_requests:88 | GET /rag/collections → 200 (0.01s)
+2026-06-16 23:01:22 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [xray] 启用工具: ['xray_diagnose']
+2026-06-16 23:01:22 | INFO     | agent.core:switch_mode:114 | 切换模式: xray → qwen2.5:3b-instruct
+2026-06-16 23:01:22 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.02s)
+2026-06-16 23:01:22 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:01:22 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:01:22 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:01:23 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [rag] 启用工具: ['rag_search']
+2026-06-16 23:01:23 | INFO     | agent.core:switch_mode:114 | 切换模式: rag → qwen2.5:3b-instruct
+2026-06-16 23:01:23 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 23:01:23 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.02s)
+2026-06-16 23:01:23 | INFO     | server.app:log_requests:88 | GET /rag/collections → 200 (0.01s)
+2026-06-16 23:01:23 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'read_file', 'write_file']
+2026-06-16 23:01:23 | INFO     | agent.core:switch_mode:114 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-16 23:01:23 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 23:01:23 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:01:24 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'read_file', 'write_file', 'list_files', 'get_current_time', 'remember', 'recall', 'send_email']
+2026-06-16 23:01:24 | INFO     | agent.core:switch_mode:114 | 切换模式: normal → qwen2.5:3b-instruct
+2026-06-16 23:01:24 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.02s)
+2026-06-16 23:01:24 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:01:24 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 23:01:24 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 23:01:24 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.02s)
+2026-06-16 23:01:24 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.02s)
+2026-06-16 23:01:24 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.02s)
+2026-06-16 23:01:24 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.02s)
+2026-06-16 23:01:24 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_polish → 200 (0.02s)
+2026-06-16 23:01:24 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_rewrite → 200 (0.02s)
+2026-06-16 23:01:24 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.03s)
+2026-06-16 23:01:24 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.01s)
+2026-06-16 23:01:25 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.02s)
+2026-06-16 23:01:25 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.02s)
+2026-06-16 23:01:28 | INFO     | server.app:log_requests:88 | POST /settings → 200 (0.01s)
+2026-06-16 23:01:28 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 23:01:30 | INFO     | agent.core:_apply_mode_tools:100 | 模式 [email] 启用工具: ['send_email']
+2026-06-16 23:01:30 | INFO     | agent.core:switch_mode:114 | 切换模式: email → qwen2.5:3b-instruct
+2026-06-16 23:01:30 | INFO     | server.app:log_requests:88 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-16 23:01:30 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.05s)
+2026-06-16 23:01:30 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.05s)
+2026-06-16 23:01:30 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.04s)
+2026-06-16 23:01:30 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_polish → 200 (0.03s)
+2026-06-16 23:01:30 | INFO     | server.app:log_requests:88 | GET /chat/prompts/email_rewrite → 200 (0.03s)
+2026-06-16 23:01:30 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.02s)
+2026-06-16 23:01:30 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.01s)
+2026-06-16 23:01:30 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.02s)
+2026-06-16 23:01:30 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.02s)
+2026-06-16 23:01:45 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.02s)
+2026-06-16 23:01:45 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:01:45 | INFO     | server.app:log_requests:88 | GET /email/sent → 200 (0.02s)
+2026-06-16 23:01:45 | INFO     | server.app:log_requests:88 | GET /email/drafts → 200 (0.02s)
+2026-06-16 23:01:45 | INFO     | server.app:log_requests:88 | GET /chat/conversations → 200 (0.01s)
+2026-06-16 23:01:47 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.03s)
+2026-06-16 23:01:47 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.03s)
+2026-06-16 23:01:51 | INFO     | server.app:log_requests:88 | POST /settings → 200 (0.01s)
+2026-06-16 23:01:51 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 23:03:07 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.02s)
+2026-06-16 23:03:07 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)
+2026-06-16 23:04:59 | INFO     | server.app:log_requests:88 | OPTIONS /settings → 200 (0.01s)
+2026-06-16 23:04:59 | INFO     | server.app:log_requests:88 | OPTIONS /memory/list → 200 (0.01s)
+2026-06-16 23:04:59 | INFO     | server.app:log_requests:88 | GET /settings → 200 (0.01s)
+2026-06-16 23:04:59 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)
+2026-06-16 23:05:09 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.02s)
+2026-06-16 23:05:09 | INFO     | server.app:log_requests:88 | GET /memory/list → 200 (0.01s)

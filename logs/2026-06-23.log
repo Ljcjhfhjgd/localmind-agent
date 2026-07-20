@@ -1,0 +1,689 @@
+2026-06-23 23:01:41 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-23 23:01:41 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-23 23:01:44 | INFO     | __main__:check_ollama:51 | Ollama 运行中，18 个模型
+2026-06-23 23:01:44 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-23 23:01:44 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-23 23:01:44 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-23 23:01:46 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-23 23:01:46 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-23 23:01:46 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-23 23:01:46 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-23 23:01:46 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-23 23:02:19 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 403 (0.00s)
+2026-06-23 23:02:19 | INFO     | server.app:log_requests:68 | GET /settings → 200 (0.00s)
+2026-06-23 23:02:19 | INFO     | server.app:log_requests:68 | OPTIONS /email/drafts → 200 (0.00s)
+2026-06-23 23:02:19 | INFO     | server.app:log_requests:68 | OPTIONS /email/sent → 200 (0.00s)
+2026-06-23 23:02:19 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations → 200 (0.00s)
+2026-06-23 23:02:19 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-23 23:02:19 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-23 23:02:20 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-23 23:02:20 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-23 23:02:20 | INFO     | agent.core:__init__:84 | 已加载用户设置覆盖
+2026-06-23 23:02:20 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:02:20 | INFO     | agent.core:__init__:93 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-23 23:02:20 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.02s)
+2026-06-23 23:02:22 | INFO     | server.app:log_requests:68 | OPTIONS /chat/mode/switch → 200 (0.00s)
+2026-06-23 23:02:22 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'get_current_time', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:02:22 | INFO     | agent.core:switch_mode:138 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-23 23:02:22 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-23 23:02:22 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations → 200 (0.00s)
+2026-06-23 23:02:22 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:02:23 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/switch → 200 (0.00s)
+2026-06-23 23:02:23 | INFO     | server.app:log_requests:68 | POST /chat/conversations/switch → 200 (0.00s)
+2026-06-23 23:02:23 | INFO     | server.app:log_requests:68 | OPTIONS /chat/history → 200 (0.00s)
+2026-06-23 23:02:23 | INFO     | server.app:log_requests:68 | GET /chat/history → 200 (0.00s)
+2026-06-23 23:02:23 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:02:25 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/e6099ab2-be60-417a-a2d2-0b49e5069ac0 → 200 (0.00s)
+2026-06-23 23:02:25 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/e6099ab2-be60-417a-a2d2-0b49e5069ac0 → 200 (0.00s)
+2026-06-23 23:02:26 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:02:35 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:02:35 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:02:35 | INFO     | server.app:log_requests:68 | OPTIONS /chat → 200 (0.00s)
+2026-06-23 23:02:35 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 帮我搜一下杭州最近一周的天气 (等待中: 0)
+2026-06-23 23:02:35 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: agent
+2026-06-23 23:02:35 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 帮我搜一下杭州最近一周的天气, 模式: agent
+2026-06-23 23:02:35 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-23 23:02:41 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:04:18 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 帮我搜一下杭州最近一周的天气
+2026-06-23 23:04:19 | INFO     | server.app:log_requests:68 | OPTIONS /chat/stop → 200 (0.02s)
+2026-06-23 23:04:19 | INFO     | server.app:log_requests:68 | OPTIONS /chat/save_partial → 200 (0.02s)
+2026-06-23 23:04:19 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:04:19 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.02s)
+2026-06-23 23:04:19 | INFO     | agent.core:switch_mode:138 | 切换模式: normal → qwen2.5:3b-instruct
+2026-06-23 23:04:19 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-23 23:04:19 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.02s)
+2026-06-23 23:04:19 | INFO     | server.app:log_requests:68 | POST /chat/stop → 200 (0.00s)
+2026-06-23 23:04:19 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.01s)
+2026-06-23 23:04:19 | INFO     | server.app:log_requests:68 | POST /chat/save_partial → 200 (0.01s)
+2026-06-23 23:04:19 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-23 23:04:19 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'get_current_time', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:04:19 | INFO     | server.app:log_requests:68 | POST /chat/stop → 200 (0.00s)
+2026-06-23 23:04:19 | INFO     | agent.core:switch_mode:138 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-23 23:04:19 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-23 23:04:19 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:04:22 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/d8db9b73-3c67-4376-837b-56c50c220a7d → 200 (0.00s)
+2026-06-23 23:04:22 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/d8db9b73-3c67-4376-837b-56c50c220a7d → 200 (0.00s)
+2026-06-23 23:04:22 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:04:23 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-23 23:04:23 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:04:23 | INFO     | agent.core:switch_mode:138 | 切换模式: normal → qwen2.5:3b-instruct
+2026-06-23 23:04:23 | INFO     | server.app:log_requests:68 | POST /chat/stop → 200 (0.00s)
+2026-06-23 23:04:23 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-23 23:04:23 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:04:23 | INFO     | server.app:log_requests:68 | POST /chat/conversations/switch → 200 (0.01s)
+2026-06-23 23:04:23 | INFO     | server.app:log_requests:68 | OPTIONS /chat/history → 200 (0.00s)
+2026-06-23 23:04:23 | INFO     | server.app:log_requests:68 | GET /chat/history → 200 (0.00s)
+2026-06-23 23:04:23 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:04:25 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-23 23:04:25 | INFO     | server.app:log_requests:68 | POST /chat/stop → 200 (0.00s)
+2026-06-23 23:04:25 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'get_current_time', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:04:25 | INFO     | agent.core:switch_mode:138 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-23 23:04:25 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-23 23:04:25 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:04:28 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:04:28 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 用 Python 实现一个简单的正则表达式引擎 (等待中: 0)
+2026-06-23 23:04:28 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: agent
+2026-06-23 23:04:28 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 用 Python 实现一个简单的正则表达式引擎, 模式: agent
+2026-06-23 23:04:28 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-23 23:04:28 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:06:29 | ERROR    | llm.client:chat:123 | 硅基流动 API 调用失败: 
+2026-06-23 23:06:29 | ERROR    | server.routes.chat:event_stream:120 | SSE 异常: 
+2026-06-23 23:06:29 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 用 Python 实现一个简单的正则表达式引擎
+2026-06-23 23:06:29 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:06:39 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-23 23:06:39 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:06:39 | INFO     | server.app:log_requests:68 | POST /chat/stop → 200 (0.00s)
+2026-06-23 23:06:39 | INFO     | agent.core:switch_mode:138 | 切换模式: normal → qwen2.5:3b-instruct
+2026-06-23 23:06:39 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-23 23:06:39 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:06:39 | INFO     | server.routes.chat:stop_chat:203 | [队列] 收到停止请求
+2026-06-23 23:06:39 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'get_current_time', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:06:39 | INFO     | server.app:log_requests:68 | POST /chat/stop → 200 (0.00s)
+2026-06-23 23:06:39 | INFO     | agent.core:switch_mode:138 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-23 23:06:39 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-23 23:06:39 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:06:41 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/7ce68add-ab01-4e04-a9d5-acde820afbc7 → 200 (0.00s)
+2026-06-23 23:06:41 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/7ce68add-ab01-4e04-a9d5-acde820afbc7 → 200 (0.00s)
+2026-06-23 23:06:41 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:07:36 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-23 23:07:36 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-23 23:07:38 | INFO     | __main__:check_ollama:51 | Ollama 运行中，18 个模型
+2026-06-23 23:07:38 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-23 23:07:38 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-23 23:07:38 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-23 23:07:40 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-23 23:07:40 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-23 23:07:40 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-23 23:07:40 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-23 23:07:40 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-23 23:07:44 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 403 (0.00s)
+2026-06-23 23:07:44 | INFO     | server.app:log_requests:68 | GET /settings → 200 (0.00s)
+2026-06-23 23:07:44 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-23 23:07:44 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-23 23:07:44 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-23 23:07:44 | INFO     | agent.core:__init__:84 | 已加载用户设置覆盖
+2026-06-23 23:07:44 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:07:44 | INFO     | agent.core:__init__:93 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-23 23:07:44 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'get_current_time', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:07:44 | INFO     | agent.core:switch_mode:138 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-23 23:07:44 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-23 23:07:44 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.03s)
+2026-06-23 23:07:44 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:07:44 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:07:46 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:07:46 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 帮我用 Python 实现 Base64 编解码 (等待中: 0)
+2026-06-23 23:07:46 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: agent
+2026-06-23 23:07:46 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 帮我用 Python 实现 Base64 编解码, 模式: agent
+2026-06-23 23:07:46 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-23 23:07:47 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:07:50 | WARNING  | agent.orchestrator.master:_plan:67 | [MasterAgent] 计划解析失败: [{"role": "code", "task": "实现一个Python脚本来实现Base64编解码JSON"}, {"role": "translate" "task": "将用户需求翻译成英文将
+2026-06-23 23:07:50 | INFO     | agent.orchestrator.master:run:22 | [MasterAgent] 计划: [{"role": "search", "task": "帮我用 Python 实现 Base64 编解码"}]
+2026-06-23 23:07:50 | INFO     | agent.orchestrator.workers:run:24 | [SearchAgent] 关键词: Python Base64 编解码
+2026-06-23 23:07:50 | INFO     | tools.search.tool:execute:68 | [搜索] 原始查询: Python Base64 编解码
+2026-06-23 23:07:54 | INFO     | tools.search.tool:_optimize_query:132 | [优化] Python Base64 编解码 -> Python 解码 Base64 2026年6月23日
+2026-06-23 23:07:55 | INFO     | tools.search.tool:execute:77 | [搜索] 获取到 8 个链接
+2026-06-23 23:07:55 | INFO     | tools.search.tool:_resolve_urls:237 | [解析] https://blog.csdn.net/m0_62207482/article/details/135681914
+2026-06-23 23:07:55 | INFO     | tools.search.tool:_resolve_urls:237 | [解析] https://www.jb51.net/python/3661111tw.htm
+2026-06-23 23:07:55 | INFO     | tools.search.tool:_resolve_urls:237 | [解析] https://docs.python.org/zh-cn/3/library/base64.html
+2026-06-23 23:07:55 | INFO     | tools.search.tool:_resolve_urls:237 | [解析] https://docs.pingcode.com/ask/1165539.html
+2026-06-23 23:07:55 | INFO     | tools.search.tool:_resolve_urls:237 | [解析] https://comate.baidu.com/zh/page/uxcc5o36mvo
+2026-06-23 23:07:55 | INFO     | tools.search.tool:_resolve_urls:237 | [解析] https://blog.csdn.net/weixin_39592315/article/details/110165298
+2026-06-23 23:07:55 | INFO     | tools.search.tool:_resolve_urls:237 | [解析] https://www.jb51.net/article/276724.htm
+2026-06-23 23:07:55 | INFO     | tools.search.tool:_resolve_urls:237 | [解析] https://baijiahao.baidu.com/s?id=1846966096752397997&wfr=spider&for=pc
+2026-06-23 23:07:55 | INFO     | tools.search.tool:execute:80 | [搜索] 解析出 8 个真实链接
+2026-06-23 23:07:55 | INFO     | tools.search.tool:_fetch_articles:249 | [抓取] https://blog.csdn.net/m0_62207482/article/details/135681914
+2026-06-23 23:07:56 | INFO     | tools.search.tool:_fetch_articles:260 | [抓取] ✅ httpx 161422字
+2026-06-23 23:07:56 | INFO     | tools.search.tool:_fetch_articles:249 | [抓取] https://www.jb51.net/python/3661111tw.htm
+2026-06-23 23:07:56 | INFO     | tools.search.tool:_fetch_articles:260 | [抓取] ✅ httpx 34260字
+2026-06-23 23:07:57 | INFO     | tools.search.tool:_fetch_articles:249 | [抓取] https://docs.python.org/zh-cn/3/library/base64.html
+2026-06-23 23:07:57 | INFO     | tools.search.tool:_fetch_articles:260 | [抓取] ✅ httpx 58775字
+2026-06-23 23:07:58 | INFO     | tools.search.tool:_fetch_articles:249 | [抓取] https://docs.pingcode.com/ask/1165539.html
+2026-06-23 23:07:58 | INFO     | tools.search.tool:_fetch_articles:260 | [抓取] ✅ httpx 356697字
+2026-06-23 23:07:58 | INFO     | tools.search.tool:_fetch_articles:249 | [抓取] https://comate.baidu.com/zh/page/uxcc5o36mvo
+2026-06-23 23:08:05 | INFO     | tools.search.tool:_fetch_articles:260 | [抓取] ✅ httpx 26504字
+2026-06-23 23:08:05 | INFO     | tools.search.tool:execute:87 | [搜索] 成功抓取 3 篇文章
+2026-06-23 23:08:11 | INFO     | agent.orchestrator.master:_execute:83 | [MasterAgent] search 完成: 看来当前提供的搜索结果中确实没有直接与Python实现Base64编解码相关的详细内容。不过，我可以直接为你提供具体的Python代码示例来实现Base64的编
+2026-06-23 23:08:11 | INFO     | agent.orchestrator.master:run:31 | [MasterAgent] 所有任务完成
+2026-06-23 23:08:37 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 帮我用 Python 实现 Base64 编解码
+2026-06-23 23:08:37 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:18:03 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-23 23:18:03 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-23 23:18:05 | INFO     | __main__:check_ollama:51 | Ollama 运行中，18 个模型
+2026-06-23 23:18:05 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-23 23:18:05 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-23 23:18:05 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-23 23:18:07 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-23 23:18:07 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-23 23:18:07 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-23 23:18:07 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-23 23:18:07 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-23 23:18:10 | INFO     | server.app:log_requests:68 | OPTIONS /email/sent → 200 (0.00s)
+2026-06-23 23:18:10 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations → 200 (0.00s)
+2026-06-23 23:18:10 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-23 23:18:10 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.01s)
+2026-06-23 23:18:10 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-23 23:18:10 | INFO     | agent.core:__init__:84 | 已加载用户设置覆盖
+2026-06-23 23:18:10 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:18:10 | INFO     | agent.core:__init__:93 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-23 23:18:10 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.01s)
+2026-06-23 23:18:13 | INFO     | server.app:log_requests:68 | OPTIONS /chat/mode/switch → 200 (0.00s)
+2026-06-23 23:18:13 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'get_current_time', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:18:13 | INFO     | agent.core:switch_mode:138 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-23 23:18:13 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-23 23:18:13 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations → 200 (0.00s)
+2026-06-23 23:18:13 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:18:13 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/switch → 200 (0.00s)
+2026-06-23 23:18:13 | INFO     | server.app:log_requests:68 | POST /chat/conversations/switch → 200 (0.00s)
+2026-06-23 23:18:13 | INFO     | server.app:log_requests:68 | OPTIONS /chat/history → 200 (0.00s)
+2026-06-23 23:18:13 | INFO     | server.app:log_requests:68 | GET /chat/history → 200 (0.00s)
+2026-06-23 23:18:13 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:18:18 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:18:18 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:18:18 | INFO     | server.app:log_requests:68 | OPTIONS /chat → 200 (0.00s)
+2026-06-23 23:18:18 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 算一下概率：抛硬币 10 次，恰好 7 次正面的概率 (等待中: 0)
+2026-06-23 23:18:18 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: agent
+2026-06-23 23:18:18 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 算一下概率：抛硬币 10 次，恰好 7 次正面的概率, 模式: agent
+2026-06-23 23:18:18 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.02s)
+2026-06-23 23:18:23 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:18:33 | INFO     | agent.orchestrator.master:run:22 | [MasterAgent] 计划: [{"role": "calculate", "task": "计算抛硬币10次恰好7次正面的概率"}]
+2026-06-23 23:20:33 | ERROR    | llm.client:chat:123 | 硅基流动 API 调用失败: 
+2026-06-23 23:20:33 | ERROR    | agent.orchestrator.master:_execute:92 | [MasterAgent] calculate 失败: 
+2026-06-23 23:20:33 | INFO     | agent.orchestrator.master:run:33 | [MasterAgent] 第1轮重试，失败任务: 1
+2026-06-23 23:22:51 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-23 23:22:51 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-23 23:22:54 | INFO     | __main__:check_ollama:51 | Ollama 运行中，18 个模型
+2026-06-23 23:22:54 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-23 23:22:54 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-23 23:22:54 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-23 23:22:56 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-23 23:22:56 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-23 23:22:56 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-23 23:22:56 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-23 23:22:56 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-23 23:23:07 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 403 (0.00s)
+2026-06-23 23:23:07 | INFO     | server.app:log_requests:68 | GET /settings → 200 (0.00s)
+2026-06-23 23:23:07 | INFO     | server.app:log_requests:68 | OPTIONS /email/drafts → 200 (0.00s)
+2026-06-23 23:23:07 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-23 23:23:07 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-23 23:23:07 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-23 23:23:07 | INFO     | agent.core:__init__:84 | 已加载用户设置覆盖
+2026-06-23 23:23:07 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:23:07 | INFO     | agent.core:__init__:93 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-23 23:23:07 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-23 23:23:07 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.01s)
+2026-06-23 23:23:07 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 403 (0.00s)
+2026-06-23 23:23:07 | INFO     | server.app:log_requests:68 | GET /settings → 200 (0.00s)
+2026-06-23 23:23:07 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-23 23:23:07 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:23:07 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-23 23:23:08 | INFO     | server.app:log_requests:68 | POST /chat/conversations/switch → 200 (0.00s)
+2026-06-23 23:23:08 | INFO     | server.app:log_requests:68 | OPTIONS /chat/history → 200 (0.00s)
+2026-06-23 23:23:08 | INFO     | server.app:log_requests:68 | GET /chat/history → 200 (0.00s)
+2026-06-23 23:23:08 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:23:08 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'get_current_time', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:23:08 | INFO     | agent.core:switch_mode:138 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-23 23:23:08 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.01s)
+2026-06-23 23:23:08 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:23:09 | INFO     | server.app:log_requests:68 | POST /chat/conversations/switch → 200 (0.00s)
+2026-06-23 23:23:09 | INFO     | server.app:log_requests:68 | OPTIONS /chat/history → 200 (0.00s)
+2026-06-23 23:23:09 | INFO     | server.app:log_requests:68 | GET /chat/history → 200 (0.00s)
+2026-06-23 23:23:09 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:23:10 | INFO     | server.app:log_requests:68 | POST /chat/conversations/switch → 200 (0.00s)
+2026-06-23 23:23:10 | INFO     | server.app:log_requests:68 | GET /chat/history → 200 (0.00s)
+2026-06-23 23:23:10 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:23:11 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/93241bc1-51c1-4a0a-be24-e39e66144732 → 200 (0.00s)
+2026-06-23 23:23:11 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/93241bc1-51c1-4a0a-be24-e39e66144732 → 200 (0.00s)
+2026-06-23 23:23:11 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:23:12 | INFO     | server.app:log_requests:68 | POST /chat/conversations/switch → 200 (0.00s)
+2026-06-23 23:23:12 | INFO     | server.app:log_requests:68 | GET /chat/history → 200 (0.00s)
+2026-06-23 23:23:12 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:23:13 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:23:13 | INFO     | agent.core:switch_mode:138 | 切换模式: normal → qwen2.5:3b-instruct
+2026-06-23 23:23:13 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-23 23:23:13 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:23:14 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'get_current_time', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:23:14 | INFO     | agent.core:switch_mode:138 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-23 23:23:14 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-23 23:23:14 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:23:17 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:23:17 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 北京今天天气怎么样？ (等待中: 0)
+2026-06-23 23:23:17 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: agent
+2026-06-23 23:23:17 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 北京今天天气怎么样？, 模式: agent
+2026-06-23 23:23:17 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.02s)
+2026-06-23 23:23:18 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:23:19 | WARNING  | agent.orchestrator.master:_plan:73 | [MasterAgent] 计划解析失败(第1次): [{"role": "weather", "task": "北京 today"})]
+2026-06-23 23:23:20 | WARNING  | agent.orchestrator.master:_plan:73 | [MasterAgent] 计划解析失败(第2次): [
+    {"role": "time", "task": "获取当前时间"}
+]
+[
+    {"role": "weather", "task": "北京 today"}
+]
+2026-06-23 23:23:21 | INFO     | agent.orchestrator.master:run:22 | [MasterAgent] 计划: [{"role": "weather", "task": "北京 today"}]
+2026-06-23 23:23:21 | INFO     | agent.orchestrator.workers:run:106 | [WeatherAgent] 城市: 北京
+2026-06-23 23:23:32 | INFO     | agent.orchestrator.master:_execute:90 | [MasterAgent] weather 完成: ❌ 无法获取 北京 的天气
+2026-06-23 23:23:32 | INFO     | agent.orchestrator.master:run:31 | [MasterAgent] 所有任务完成
+2026-06-23 23:23:33 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 北京今天天气怎么样？
+2026-06-23 23:23:33 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:24:33 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:24:33 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 帮我搜一下最近 AI 领域的投融资新闻 (等待中: 0)
+2026-06-23 23:24:33 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: agent
+2026-06-23 23:24:33 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 帮我搜一下最近 AI 领域的投融资新闻, 模式: agent
+2026-06-23 23:24:33 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-23 23:24:34 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:24:35 | INFO     | agent.orchestrator.master:run:22 | [MasterAgent] 计划: [{"role": "search", "task": "搜索AI领域最近的投融资新闻"}]
+2026-06-23 23:24:36 | INFO     | agent.orchestrator.workers:run:24 | [SearchAgent] 关键词: 百度 AI 最新融资新闻
+2026-06-23 23:24:49 | INFO     | agent.orchestrator.master:_execute:90 | [MasterAgent] search 完成: 由于当前没有网络环境可以访问互联网来获取最新的融资新闻信息，我将基于一般情况提供一个示例格式，用于提取与“搜索AI领域最近的投融资新闻”最相关的3条信息。
+
+1
+2026-06-23 23:24:49 | INFO     | agent.orchestrator.master:run:31 | [MasterAgent] 所有任务完成
+2026-06-23 23:24:51 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 帮我搜一下最近 AI 领域的投融资新闻
+2026-06-23 23:24:51 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:30:10 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:30:10 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.02s)
+2026-06-23 23:30:10 | INFO     | server.app:log_requests:68 | OPTIONS /chat → 200 (0.00s)
+2026-06-23 23:30:10 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 用 Python 实现一个简单的神经网络 (等待中: 0)
+2026-06-23 23:30:10 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: agent
+2026-06-23 23:30:10 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 用 Python 实现一个简单的神经网络, 模式: agent
+2026-06-23 23:30:10 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-23 23:30:14 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations → 200 (0.00s)
+2026-06-23 23:30:14 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:30:15 | INFO     | agent.orchestrator.master:run:22 | [MasterAgent] 计划: [{"role": "code", "task": "实现Base64编解码"}, {"role": "code", "task": "选择合适的神经网络库，如TensorFlow或PyTorch"}]
+2026-06-23 23:30:16 | INFO     | agent.orchestrator.workers:run:59 | [CodeAgent] 代码长度: 197
+2026-06-23 23:30:16 | INFO     | agent.orchestrator.master:_execute:90 | [MasterAgent] code 完成: 执行成功（无输出）
+2026-06-23 23:30:17 | INFO     | agent.orchestrator.workers:run:59 | [CodeAgent] 代码长度: 12
+2026-06-23 23:30:19 | INFO     | agent.orchestrator.master:_execute:90 | [MasterAgent] code 完成: 执行成功（无输出）
+2026-06-23 23:30:19 | INFO     | agent.orchestrator.master:run:31 | [MasterAgent] 所有任务完成
+2026-06-23 23:30:22 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 用 Python 实现一个简单的神经网络
+2026-06-23 23:30:22 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:31:19 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:31:19 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 帮我搜一下章丘今天天气怎么样，然后告诉我今天适合不适合出门 (等待中: 0)
+2026-06-23 23:31:19 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: agent
+2026-06-23 23:31:19 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 帮我搜一下章丘今天天气怎么样，然后告诉我今天适合不适合出门, 模式: agent
+2026-06-23 23:31:19 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-23 23:31:20 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:31:21 | INFO     | agent.orchestrator.master:run:22 | [MasterAgent] 计划: [{"role": "search", "task": "搜索章丘今天的天气情况"}]
+2026-06-23 23:31:22 | INFO     | agent.orchestrator.workers:run:24 | [SearchAgent] 关键词: 章丘今天天气
+2026-06-23 23:31:22 | INFO     | tools.search.tool:execute:68 | [搜索] 原始查询: 章丘今天天气
+2026-06-23 23:31:24 | INFO     | tools.search.tool:_optimize_query:132 | [优化] 章丘今天天气 -> 章丘 今天 天气
+2026-06-23 23:31:26 | INFO     | tools.search.tool:execute:77 | [搜索] 获取到 8 个链接
+2026-06-23 23:31:26 | INFO     | tools.search.tool:_resolve_urls:237 | [解析] http://yidian.weather.com.cn/mweather15d/101120104.shtml
+2026-06-23 23:31:26 | INFO     | tools.search.tool:_resolve_urls:237 | [解析] http://uc.weather.com.cn/mweather15d/101120104.shtml
+2026-06-23 23:31:26 | INFO     | tools.search.tool:_resolve_urls:237 | [解析] https://m.weather.com.cn/d/town/index?lat=36.721512&lon=117.549385
+2026-06-23 23:31:26 | INFO     | tools.search.tool:_resolve_urls:237 | [解析] https://www.weaoo.com/jinan-zhangqiushi-85537.html
+2026-06-23 23:31:26 | INFO     | tools.search.tool:_resolve_urls:237 | [解析] http://www.nmc.cn/publish/forecast/ASD/zhangqiu.html
+2026-06-23 23:31:26 | INFO     | tools.search.tool:_resolve_urls:237 | [解析] https://tianqi.eastday.com/zhangqiu/30/
+2026-06-23 23:31:26 | INFO     | tools.search.tool:_resolve_urls:237 | [解析] http://waptianqi.2345.com/zhangqiu-60208.htm
+2026-06-23 23:31:26 | INFO     | tools.search.tool:_resolve_urls:237 | [解析] https://tianqi.eastday.com/zhangqiu/15/
+2026-06-23 23:31:26 | INFO     | tools.search.tool:execute:80 | [搜索] 解析出 8 个真实链接
+2026-06-23 23:31:26 | INFO     | tools.search.tool:_fetch_articles:249 | [抓取] http://yidian.weather.com.cn/mweather15d/101120104.shtml
+2026-06-23 23:31:27 | INFO     | tools.search.tool:_fetch_articles:260 | [抓取] ✅ httpx 34765字
+2026-06-23 23:31:27 | INFO     | tools.search.tool:_fetch_articles:249 | [抓取] http://uc.weather.com.cn/mweather15d/101120104.shtml
+2026-06-23 23:31:27 | INFO     | tools.search.tool:_fetch_articles:260 | [抓取] ✅ httpx 34472字
+2026-06-23 23:31:27 | INFO     | tools.search.tool:_fetch_articles:249 | [抓取] https://m.weather.com.cn/d/town/index?lat=36.721512&lon=117.549385
+2026-06-23 23:31:37 | WARNING  | tools.search.tool:_fetch_articles:263 | [抓取] ❌ 全部失败
+2026-06-23 23:31:37 | INFO     | tools.search.tool:_fetch_articles:249 | [抓取] https://www.weaoo.com/jinan-zhangqiushi-85537.html
+2026-06-23 23:31:37 | INFO     | tools.search.tool:_fetch_articles:260 | [抓取] ✅ httpx 900字
+2026-06-23 23:31:37 | INFO     | tools.search.tool:_fetch_articles:249 | [抓取] http://www.nmc.cn/publish/forecast/ASD/zhangqiu.html
+2026-06-23 23:31:38 | INFO     | tools.search.tool:_fetch_articles:260 | [抓取] ✅ httpx 70247字
+2026-06-23 23:31:38 | INFO     | tools.search.tool:execute:87 | [搜索] 成功抓取 3 篇文章
+2026-06-23 23:31:46 | INFO     | agent.orchestrator.master:_execute:90 | [MasterAgent] search 完成: 根据您提供的搜索结果，以下是与"搜索章丘今天的天气情况"最相关的三条信息：
+
+1. **来源：[来源 1]**
+   - 【章丘天气预报15天_章丘天气预报15
+2026-06-23 23:31:46 | INFO     | agent.orchestrator.master:run:31 | [MasterAgent] 所有任务完成
+2026-06-23 23:31:47 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 帮我搜一下章丘今天天气怎么样，然后告诉我今天适合不适合出门
+2026-06-23 23:31:47 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:32:19 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:32:19 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 现在几点几分 (等待中: 0)
+2026-06-23 23:32:19 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: agent
+2026-06-23 23:32:19 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 现在几点几分, 模式: agent
+2026-06-23 23:32:19 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-23 23:32:20 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:32:21 | INFO     | agent.orchestrator.master:run:22 | [MasterAgent] 计划: [{"role": "time", "task": "now"}]
+2026-06-23 23:32:21 | INFO     | agent.orchestrator.master:_execute:90 | [MasterAgent] time 完成: 当前时间: 2026年06月23日 23:32:21 星期二
+2026-06-23 23:32:21 | INFO     | agent.orchestrator.master:run:31 | [MasterAgent] 所有任务完成
+2026-06-23 23:32:21 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 现在几点几分
+2026-06-23 23:32:21 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:32:52 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:32:52 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 搜索 DeepSeek 最新动态 (等待中: 0)
+2026-06-23 23:32:52 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: agent
+2026-06-23 23:32:52 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 搜索 DeepSeek 最新动态, 模式: agent
+2026-06-23 23:32:52 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-23 23:32:53 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:32:54 | INFO     | agent.orchestrator.master:run:22 | [MasterAgent] 计划: [{"role": "search", "task": "DeepSeek 最新动态搜索"}]
+2026-06-23 23:32:54 | INFO     | agent.orchestrator.workers:run:24 | [SearchAgent] 关键词: DeepSeek 最新动态
+2026-06-23 23:32:54 | INFO     | tools.search.tool:execute:68 | [搜索] 原始查询: DeepSeek 最新动态
+2026-06-23 23:32:55 | INFO     | tools.search.tool:_optimize_query:132 | [优化] DeepSeek 最新动态 -> 最近 DeepSeek 动态 2026年6月23日
+2026-06-23 23:32:56 | INFO     | tools.search.tool:execute:77 | [搜索] 获取到 1 个链接
+2026-06-23 23:32:56 | INFO     | tools.search.tool:execute:80 | [搜索] 解析出 1 个真实链接
+2026-06-23 23:32:56 | INFO     | tools.search.tool:_fetch_articles:249 | [抓取] https://chat.baidu.com/search?dyTabStr=MTIsMCwzLDEsMiwxMyw3LDYsNSw5&pd=csaitab&setype=csaitab&extPar
+2026-06-23 23:32:56 | INFO     | tools.search.tool:_fetch_articles:260 | [抓取] ✅ httpx 10178字
+2026-06-23 23:32:56 | INFO     | tools.search.tool:execute:87 | [搜索] 成功抓取 1 篇文章
+2026-06-23 23:33:03 | INFO     | agent.orchestrator.master:_execute:90 | [MasterAgent] search 完成: 根据您提供的搜索结果，以下是与“DeepSeek 最新动态”最相关的三则信息摘要：
+
+1. 来源：https://chat.baidu.com/search?d
+2026-06-23 23:33:03 | INFO     | agent.orchestrator.master:run:31 | [MasterAgent] 所有任务完成
+2026-06-23 23:33:07 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 搜索 DeepSeek 最新动态
+2026-06-23 23:33:07 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:41:16 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-23 23:41:16 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-23 23:41:18 | INFO     | __main__:check_ollama:51 | Ollama 运行中，18 个模型
+2026-06-23 23:41:18 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-23 23:41:18 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-23 23:41:18 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-23 23:41:20 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-23 23:41:20 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-23 23:41:20 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-23 23:41:20 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-23 23:41:20 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-23 23:41:29 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 403 (0.00s)
+2026-06-23 23:41:29 | INFO     | server.app:log_requests:68 | GET /settings → 200 (0.00s)
+2026-06-23 23:41:29 | INFO     | server.app:log_requests:68 | OPTIONS /email/drafts → 200 (0.00s)
+2026-06-23 23:41:29 | INFO     | server.app:log_requests:68 | OPTIONS /email/sent → 200 (0.00s)
+2026-06-23 23:41:29 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations → 200 (0.00s)
+2026-06-23 23:41:29 | INFO     | server.app:log_requests:68 | GET /email/sent → 200 (0.00s)
+2026-06-23 23:41:29 | INFO     | server.app:log_requests:68 | GET /email/drafts → 200 (0.00s)
+2026-06-23 23:41:29 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-23 23:41:29 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-23 23:41:29 | INFO     | agent.core:__init__:84 | 已加载用户设置覆盖
+2026-06-23 23:41:29 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:41:29 | INFO     | agent.core:__init__:93 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-23 23:41:29 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.01s)
+2026-06-23 23:41:30 | INFO     | server.app:log_requests:68 | OPTIONS /chat/mode/switch → 200 (0.00s)
+2026-06-23 23:41:30 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'get_current_time', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:41:30 | INFO     | agent.core:switch_mode:138 | 切换模式: agent → qwen2.5:3b-instruct
+2026-06-23 23:41:30 | INFO     | server.app:log_requests:68 | POST /chat/mode/switch → 200 (0.00s)
+2026-06-23 23:41:30 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations → 200 (0.00s)
+2026-06-23 23:41:30 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:41:31 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/switch → 200 (0.00s)
+2026-06-23 23:41:31 | INFO     | server.app:log_requests:68 | POST /chat/conversations/switch → 200 (0.00s)
+2026-06-23 23:41:31 | INFO     | server.app:log_requests:68 | OPTIONS /chat/history → 200 (0.00s)
+2026-06-23 23:41:31 | INFO     | server.app:log_requests:68 | GET /chat/history → 200 (0.00s)
+2026-06-23 23:41:31 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:41:41 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:41:41 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:41:41 | INFO     | server.app:log_requests:68 | OPTIONS /chat → 200 (0.00s)
+2026-06-23 23:41:41 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 搜索 Docker 和 Kubernetes 的区别 (等待中: 0)
+2026-06-23 23:41:41 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen2.5:3b-instruct, 模式: agent
+2026-06-23 23:41:41 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 搜索 Docker 和 Kubernetes 的区别, 模式: agent
+2026-06-23 23:41:41 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-23 23:41:44 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:41:46 | INFO     | agent.orchestrator.master:run:22 | [MasterAgent] 计划: [{"role": "review", "task": "搜索 Docker 和 Kubernetes 的区别"}]
+2026-06-23 23:41:49 | INFO     | agent.orchestrator.master:_execute:90 | [MasterAgent] review 完成: 您的回答没有提供关于 Docker 和 Kubernetes 区别的具体内容。我将帮助您构造一个准确完整的答案：
+
+Docker 和 Kubernetes 都是
+2026-06-23 23:41:49 | INFO     | agent.orchestrator.master:run:31 | [MasterAgent] 所有任务完成
+2026-06-23 23:41:52 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 搜索 Docker 和 Kubernetes 的区别
+2026-06-23 23:41:53 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:44:43 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-23 23:44:43 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-23 23:44:45 | INFO     | __main__:check_ollama:51 | Ollama 运行中，18 个模型
+2026-06-23 23:44:45 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-23 23:44:45 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-23 23:44:45 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-23 23:44:47 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-23 23:44:47 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-23 23:44:47 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-23 23:44:47 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-23 23:44:47 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-23 23:44:54 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-23 23:44:54 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-23 23:44:54 | INFO     | agent.core:__init__:84 | 已加载用户设置覆盖
+2026-06-23 23:44:54 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:44:54 | INFO     | agent.core:__init__:93 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-23 23:44:54 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 搜索 Docker 和 Kubernetes 的区别 (等待中: 0)
+2026-06-23 23:44:54 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'get_current_time', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:44:54 | INFO     | agent.core:switch_mode:138 | 切换模式: agent → qwen3:4b
+2026-06-23 23:44:54 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen3:4b, 模式: agent
+2026-06-23 23:44:54 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 搜索 Docker 和 Kubernetes 的区别, 模式: agent
+2026-06-23 23:44:54 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.02s)
+2026-06-23 23:44:55 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:44:57 | INFO     | agent.orchestrator.master:run:22 | [MasterAgent] 计划: [{"role": "review", "task": "搜索 Docker 和 Kubernetes 的区别"}]
+2026-06-23 23:44:59 | INFO     | agent.orchestrator.master:_execute:90 | [MasterAgent] review 完成: 您的结果并未提供关于 Docker 和 Kubernetes 区别的具体内容，因此我无法直接判断其准确性与完整性。不过，我可以为您提供一个基本的比较概述：
+
+#
+2026-06-23 23:44:59 | INFO     | agent.orchestrator.master:run:31 | [MasterAgent] 所有任务完成
+2026-06-23 23:45:02 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 搜索 Docker 和 Kubernetes 的区别
+2026-06-23 23:45:02 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:45:21 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:45:21 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 搜索 Docker 和 Kubernetes 的区别 (等待中: 0)
+2026-06-23 23:45:21 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen3:4b, 模式: agent
+2026-06-23 23:45:21 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 搜索 Docker 和 Kubernetes 的区别, 模式: agent
+2026-06-23 23:45:21 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-23 23:45:21 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:45:23 | INFO     | agent.orchestrator.master:run:22 | [MasterAgent] 计划: [{"role": "review", "task": "搜索 Docker 和 Kubernetes 的区别"}]
+2026-06-23 23:45:24 | INFO     | agent.orchestrator.master:_execute:90 | [MasterAgent] review 完成: 您的回答尚未提供关于 Docker 和 Kubernetes 区别的信息。请提供您生成的回答，我将帮助您进行校对和改进。
+2026-06-23 23:45:24 | INFO     | agent.orchestrator.master:run:31 | [MasterAgent] 所有任务完成
+2026-06-23 23:45:27 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 搜索 Docker 和 Kubernetes 的区别
+2026-06-23 23:45:27 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:45:33 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.02s)
+2026-06-23 23:45:33 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 搜索一下马斯克最近在干什么 (等待中: 0)
+2026-06-23 23:45:33 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen3:4b, 模式: agent
+2026-06-23 23:45:33 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 搜索一下马斯克最近在干什么, 模式: agent
+2026-06-23 23:45:33 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-23 23:45:34 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:45:35 | INFO     | agent.orchestrator.master:run:22 | [MasterAgent] 计划: [{"role": "search", "task": "搜索马斯克最近的活动"}]
+2026-06-23 23:45:36 | INFO     | agent.orchestrator.workers:run:24 | [SearchAgent] 关键词: 马斯克 最新 活动
+2026-06-23 23:45:36 | INFO     | tools.search.tool:execute:68 | [搜索] 原始查询: 马斯克 最新 活动
+2026-06-23 23:45:38 | INFO     | tools.search.tool:_optimize_query:132 | [优化] 马斯克 最新 活动 -> 马斯克 最新 活动
+2026-06-23 23:45:40 | INFO     | tools.search.tool:_search_urls:194 | [搜索] 百度返回 13 个有效结果
+2026-06-23 23:45:40 | INFO     | tools.search.tool:execute:77 | [搜索] 获取到 8 个链接
+2026-06-23 23:45:40 | INFO     | tools.search.tool:_resolve_urls:243 | [解析] http://k.sina.com.cn/article_7857201856_1d45362c0019075sig.html
+2026-06-23 23:45:40 | INFO     | tools.search.tool:_resolve_urls:243 | [解析] http://baijiahao.baidu.com/s?id=1867574564057152094&wfr=spider&for=pc
+2026-06-23 23:45:41 | INFO     | tools.search.tool:_resolve_urls:243 | [解析] https://baijiahao.baidu.com/s?id=1868296731053011930&wfr=spider&for=pc
+2026-06-23 23:45:41 | INFO     | tools.search.tool:_resolve_urls:243 | [解析] https://weibo.com/p/1008083d5b5608571a902168b356395a4a6bb8/topic_album?atype=vid
+2026-06-23 23:45:41 | INFO     | tools.search.tool:_resolve_urls:243 | [解析] https://www.jiemian.com/article/4456234_foxit.html
+2026-06-23 23:45:41 | INFO     | tools.search.tool:_resolve_urls:243 | [解析] http://word.baidu.com/noteview/106f1432e309581b6bd97f19227916888586b950.html
+2026-06-23 23:45:41 | INFO     | tools.search.tool:_resolve_urls:243 | [解析] https://baijiahao.baidu.com/s?id=1867233172894837951&wfr=spider&for=pc
+2026-06-23 23:45:41 | INFO     | tools.search.tool:_resolve_urls:243 | [解析] https://baijiahao.baidu.com/s?id=1867688565946716231&wfr=spider&for=pc
+2026-06-23 23:45:41 | INFO     | tools.search.tool:execute:80 | [搜索] 解析出 8 个真实链接
+2026-06-23 23:45:41 | INFO     | tools.search.tool:_fetch_articles:255 | [抓取] http://k.sina.com.cn/article_7857201856_1d45362c0019075sig.html
+2026-06-23 23:45:41 | INFO     | tools.search.tool:_fetch_articles:266 | [抓取] ✅ httpx 84051字
+2026-06-23 23:45:41 | INFO     | tools.search.tool:_fetch_articles:255 | [抓取] http://baijiahao.baidu.com/s?id=1867574564057152094&wfr=spider&for=pc
+2026-06-23 23:45:49 | INFO     | tools.search.tool:_fetch_articles:266 | [抓取] ✅ httpx 36451字
+2026-06-23 23:45:49 | INFO     | tools.search.tool:_fetch_articles:255 | [抓取] https://baijiahao.baidu.com/s?id=1868296731053011930&wfr=spider&for=pc
+2026-06-23 23:45:49 | INFO     | tools.search.tool:_fetch_articles:266 | [抓取] ✅ httpx 60824字
+2026-06-23 23:45:49 | INFO     | tools.search.tool:_fetch_articles:255 | [抓取] https://weibo.com/p/1008083d5b5608571a902168b356395a4a6bb8/topic_album?atype=video
+2026-06-23 23:45:49 | INFO     | tools.search.tool:_fetch_articles:266 | [抓取] ✅ httpx 9422字
+2026-06-23 23:45:49 | INFO     | tools.search.tool:_fetch_articles:255 | [抓取] https://www.jiemian.com/article/4456234_foxit.html
+2026-06-23 23:45:50 | WARNING  | tools.search.tool:_fetch_articles:269 | [抓取] ❌ 全部失败
+2026-06-23 23:45:50 | INFO     | tools.search.tool:execute:87 | [搜索] 成功抓取 3 篇文章
+2026-06-23 23:45:56 | INFO     | agent.orchestrator.master:_execute:90 | [MasterAgent] search 完成: 根据您提供的信息，我假设可能存在与马斯克最近活动相关的新闻或公告。由于实际搜索结果未找到相关信息，以下是一些可能的、与马斯克最新活动相关的一般性建议和信息：
+
+
+2026-06-23 23:45:56 | INFO     | agent.orchestrator.master:run:31 | [MasterAgent] 所有任务完成
+2026-06-23 23:45:59 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 搜索一下马斯克最近在干什么
+2026-06-23 23:45:59 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:47:46 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:47:46 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 搜索 C++ 和 Rust 内存安全对比 (等待中: 0)
+2026-06-23 23:47:46 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen3:4b, 模式: agent
+2026-06-23 23:47:46 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 搜索 C++ 和 Rust 内存安全对比, 模式: agent
+2026-06-23 23:47:46 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.02s)
+2026-06-23 23:47:47 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:47:48 | INFO     | agent.orchestrator.master:run:22 | [MasterAgent] 计划: [{"role": "search", "task": "C++ 内存安全"}]
+2026-06-23 23:47:48 | INFO     | agent.orchestrator.workers:run:24 | [SearchAgent] 关键词: C++ 内存安全技术
+2026-06-23 23:48:01 | INFO     | agent.orchestrator.master:_execute:90 | [MasterAgent] search 完成: 由于当前没有网络环境可以执行实时搜索，请您提供这三篇相关信息的具体内容或关键词，我可以根据已有的知识库帮助您提取与"C++ 内存安全"相关的信息。
+2026-06-23 23:48:01 | INFO     | agent.orchestrator.master:run:31 | [MasterAgent] 所有任务完成
+2026-06-23 23:48:03 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 搜索 C++ 和 Rust 内存安全对比
+2026-06-23 23:48:03 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:50:20 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-23 23:50:20 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-23 23:50:22 | INFO     | __main__:check_ollama:51 | Ollama 运行中，18 个模型
+2026-06-23 23:50:22 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-23 23:50:22 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-23 23:50:22 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-23 23:50:24 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-23 23:50:24 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-23 23:50:24 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-23 23:50:24 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-23 23:50:24 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-23 23:51:12 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-23 23:51:12 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-23 23:51:12 | INFO     | agent.core:__init__:84 | 已加载用户设置覆盖
+2026-06-23 23:51:12 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:51:12 | INFO     | agent.core:__init__:93 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-23 23:51:12 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'get_current_time', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:51:12 | INFO     | agent.core:switch_mode:138 | 切换模式: agent → qwen3:4b
+2026-06-23 23:51:12 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.02s)
+2026-06-23 23:51:12 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 用 Python 写一个快速排序，并解释时间复杂度 (等待中: 0)
+2026-06-23 23:51:12 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen3:4b, 模式: agent
+2026-06-23 23:51:12 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 用 Python 写一个快速排序，并解释时间复杂度, 模式: agent
+2026-06-23 23:51:12 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.02s)
+2026-06-23 23:51:13 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:51:14 | INFO     | agent.orchestrator.master:run:22 | [MasterAgent] 计划: [{"role": "code", "task": "实现Base64编解码"}, {"role": "time", "task": "查询Python快速排序的时间复杂度"}]
+2026-06-23 23:51:15 | INFO     | agent.orchestrator.workers:run:59 | [CodeAgent] 代码长度: 189
+2026-06-23 23:51:15 | INFO     | agent.orchestrator.master:_execute:90 | [MasterAgent] code 完成: 执行成功（无输出）
+2026-06-23 23:51:15 | INFO     | agent.orchestrator.master:_execute:90 | [MasterAgent] time 完成: 当前时间: 2026年06月23日 23:51:15 星期二
+2026-06-23 23:51:15 | INFO     | agent.orchestrator.master:run:31 | [MasterAgent] 所有任务完成
+2026-06-23 23:51:16 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 用 Python 写一个快速排序，并解释时间复杂度
+2026-06-23 23:51:16 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:51:46 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:51:46 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:51:46 | INFO     | server.app:log_requests:68 | OPTIONS /chat → 200 (0.00s)
+2026-06-23 23:51:46 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 查一下杭州天气，然后翻译成英文 (等待中: 0)
+2026-06-23 23:51:46 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen3:4b, 模式: agent
+2026-06-23 23:51:46 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 查一下杭州天气，然后翻译成英文, 模式: agent
+2026-06-23 23:51:46 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.02s)
+2026-06-23 23:51:47 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations → 200 (0.00s)
+2026-06-23 23:51:47 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:51:48 | INFO     | agent.orchestrator.master:run:22 | [MasterAgent] 计划: [{"role": "weather", "task": "查询杭州天气"}, {"role": "translate", "task": "将查询到的杭州天气翻译成英文"}]
+2026-06-23 23:51:48 | INFO     | agent.orchestrator.workers:run:106 | [WeatherAgent] 城市: 杭州
+2026-06-23 23:51:49 | INFO     | agent.orchestrator.master:_execute:90 | [MasterAgent] weather 完成: 🌤 杭州天气: 杭州: 🌦️  +24°C 94% ↓5km/h
+2026-06-23 23:51:52 | INFO     | agent.orchestrator.master:_execute:90 | [MasterAgent] translate 完成: The weather in Hangzhou is being reported.
+2026-06-23 23:51:52 | INFO     | agent.orchestrator.master:run:31 | [MasterAgent] 所有任务完成
+2026-06-23 23:51:53 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 查一下杭州天气，然后翻译成英文
+2026-06-23 23:51:53 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:57:30 | INFO     | __main__:setup_logging:27 | 日志系统初始化完成
+2026-06-23 23:57:30 | INFO     | __main__:main:179 | LocalMind Agent 启动中...
+2026-06-23 23:57:32 | INFO     | __main__:check_ollama:51 | Ollama 运行中，18 个模型
+2026-06-23 23:57:32 | INFO     | __main__:init_data:87 | 初始化数据目录
+2026-06-23 23:57:32 | INFO     | __main__:init_data:106 | 数据目录就绪，5 个模式
+2026-06-23 23:57:32 | INFO     | __main__:check_models:111 | 检查 AI 模型
+2026-06-23 23:57:34 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:3b-instruct
+2026-06-23 23:57:34 | INFO     | __main__:check_models:119 | Ollama 模型就绪: qwen2.5:7b-instruct
+2026-06-23 23:57:34 | INFO     | __main__:check_models:132 | 胸片模型就绪: tools/xray/xray_models/best_classifier.enc (125.4 MB)
+2026-06-23 23:57:34 | INFO     | __main__:start_server:167 | 启动服务: 0.0.0.0:8765
+2026-06-23 23:57:34 | INFO     | __main__:start_server:168 | 鉴权状态: 🔓 未启用
+2026-06-23 23:57:46 | INFO     | tools.rag.engine:__init__:45 | RAG 引擎初始化完成: embed=bge-m3, chunk=500
+2026-06-23 23:57:46 | INFO     | tools.system.tool:on_mount:47 | RememberTool 已挂载 agent
+2026-06-23 23:57:46 | INFO     | agent.core:__init__:84 | 已加载用户设置覆盖
+2026-06-23 23:57:46 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [normal] 启用工具: ['vision_describe', 'xray_diagnose', 'rag_search', 'web_search', 'execute_code', 'calculate', 'get_current_time', 'remember', 'recall', 'send_email', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:57:46 | INFO     | agent.core:__init__:93 | LocalMindAgent 初始化完成, 模式: normal, 模型: qwen2.5:3b-instruct
+2026-06-23 23:57:46 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 查一下杭州天气，然后翻译成英文 (等待中: 0)
+2026-06-23 23:57:46 | INFO     | agent.core:_apply_mode_tools:124 | 模式 [agent] 启用工具: ['web_search', 'execute_code', 'calculate', 'get_current_time', 'get_weather', 'translate', 'summarize_url']
+2026-06-23 23:57:46 | INFO     | agent.core:switch_mode:138 | 切换模式: agent → qwen3:4b
+2026-06-23 23:57:46 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen3:4b, 模式: agent
+2026-06-23 23:57:46 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 查一下杭州天气，然后翻译成英文, 模式: agent
+2026-06-23 23:57:46 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.03s)
+2026-06-23 23:57:50 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:57:50 | INFO     | agent.orchestrator.master:run:22 | [MasterAgent] 计划: ["weather", "translate"]
+2026-06-23 23:57:50 | ERROR    | server.routes.chat:event_stream:120 | SSE 异常: 'str' object has no attribute 'get'
+2026-06-23 23:57:50 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 查一下杭州天气，然后翻译成英文
+2026-06-23 23:57:50 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:57:59 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/switch → 200 (0.00s)
+2026-06-23 23:57:59 | INFO     | server.app:log_requests:68 | POST /chat/conversations/switch → 200 (0.00s)
+2026-06-23 23:57:59 | INFO     | server.app:log_requests:68 | OPTIONS /chat/history → 200 (0.00s)
+2026-06-23 23:57:59 | INFO     | server.app:log_requests:68 | GET /chat/history → 200 (0.00s)
+2026-06-23 23:57:59 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:57:59 | INFO     | server.app:log_requests:68 | POST /chat/conversations/switch → 200 (0.00s)
+2026-06-23 23:57:59 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:00 | INFO     | server.app:log_requests:68 | POST /chat/conversations/switch → 200 (0.00s)
+2026-06-23 23:58:00 | INFO     | server.app:log_requests:68 | GET /chat/history → 200 (0.00s)
+2026-06-23 23:58:00 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:02 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/47c0b7cd-a9db-454b-8156-86e9b27cd129 → 200 (0.00s)
+2026-06-23 23:58:02 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/47c0b7cd-a9db-454b-8156-86e9b27cd129 → 200 (0.00s)
+2026-06-23 23:58:02 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:03 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/4e1a8fe6-9237-4ecc-9803-1eceabf95345 → 200 (0.00s)
+2026-06-23 23:58:03 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/4e1a8fe6-9237-4ecc-9803-1eceabf95345 → 200 (0.00s)
+2026-06-23 23:58:03 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:04 | INFO     | server.app:log_requests:68 | POST /chat/conversations/switch → 200 (0.00s)
+2026-06-23 23:58:04 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:05 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/d5998aff-d344-40d3-8706-5027ed2a8309 → 200 (0.00s)
+2026-06-23 23:58:05 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/d5998aff-d344-40d3-8706-5027ed2a8309 → 200 (0.00s)
+2026-06-23 23:58:05 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:07 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/33355ba4-5489-4d95-8ac8-95690874b0cf → 200 (0.00s)
+2026-06-23 23:58:07 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/33355ba4-5489-4d95-8ac8-95690874b0cf → 200 (0.00s)
+2026-06-23 23:58:07 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:08 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/f0751cb7-3bd6-4da2-9dc6-20a0032e4583 → 200 (0.00s)
+2026-06-23 23:58:08 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/f0751cb7-3bd6-4da2-9dc6-20a0032e4583 → 200 (0.00s)
+2026-06-23 23:58:08 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:10 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/6b31c63e-d05a-41e0-bc17-81b9b58427ac → 200 (0.00s)
+2026-06-23 23:58:10 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/6b31c63e-d05a-41e0-bc17-81b9b58427ac → 200 (0.01s)
+2026-06-23 23:58:10 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:10 | INFO     | server.app:log_requests:68 | POST /chat/conversations/switch → 200 (0.00s)
+2026-06-23 23:58:10 | INFO     | server.app:log_requests:68 | OPTIONS /chat/history → 200 (0.00s)
+2026-06-23 23:58:11 | INFO     | server.app:log_requests:68 | GET /chat/history → 200 (0.00s)
+2026-06-23 23:58:11 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:12 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/f44f93a4-da79-48a8-9862-cab074c65da5 → 200 (0.00s)
+2026-06-23 23:58:12 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/f44f93a4-da79-48a8-9862-cab074c65da5 → 200 (0.00s)
+2026-06-23 23:58:12 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:13 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/59decdef-09b5-4ed9-a7df-1e8c5d30201a → 200 (0.00s)
+2026-06-23 23:58:13 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/59decdef-09b5-4ed9-a7df-1e8c5d30201a → 200 (0.00s)
+2026-06-23 23:58:13 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:15 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/80b394f7-78ec-479b-8a9a-30f220ef8509 → 200 (0.00s)
+2026-06-23 23:58:15 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/80b394f7-78ec-479b-8a9a-30f220ef8509 → 200 (0.00s)
+2026-06-23 23:58:15 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:17 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/5854956d-3d9e-4b34-9346-8fc74af9a47e → 200 (0.00s)
+2026-06-23 23:58:17 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/5854956d-3d9e-4b34-9346-8fc74af9a47e → 200 (0.00s)
+2026-06-23 23:58:17 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:18 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/590f15f7-55aa-48aa-9412-0fbfe9f91a58 → 200 (0.00s)
+2026-06-23 23:58:18 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/590f15f7-55aa-48aa-9412-0fbfe9f91a58 → 200 (0.00s)
+2026-06-23 23:58:18 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:20 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/08b956c5-48f3-4882-b0a9-8a127cf15a24 → 200 (0.00s)
+2026-06-23 23:58:20 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/08b956c5-48f3-4882-b0a9-8a127cf15a24 → 200 (0.00s)
+2026-06-23 23:58:20 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:24 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/6c7db438-756a-42c7-b518-8c14085f2af7 → 200 (0.00s)
+2026-06-23 23:58:24 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/6c7db438-756a-42c7-b518-8c14085f2af7 → 200 (0.00s)
+2026-06-23 23:58:24 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:25 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/5c090b91-5333-42ed-9033-229729fb9eb8 → 200 (0.00s)
+2026-06-23 23:58:25 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/5c090b91-5333-42ed-9033-229729fb9eb8 → 200 (0.00s)
+2026-06-23 23:58:25 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:27 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/fb06983c-dc88-42a8-9b11-c50a3dfc22b6 → 200 (0.00s)
+2026-06-23 23:58:27 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/fb06983c-dc88-42a8-9b11-c50a3dfc22b6 → 200 (0.00s)
+2026-06-23 23:58:27 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:30 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:58:30 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 查一下杭州天气，然后翻译成英文 (等待中: 0)
+2026-06-23 23:58:30 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen3:4b, 模式: agent
+2026-06-23 23:58:30 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 查一下杭州天气，然后翻译成英文, 模式: agent
+2026-06-23 23:58:30 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-23 23:58:30 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:31 | INFO     | agent.orchestrator.master:run:22 | [MasterAgent] 计划: [{"role": "weather"}, {"role": "translate"}]
+2026-06-23 23:58:32 | INFO     | agent.orchestrator.workers:run:106 | [WeatherAgent] 城市: 请提供需要提取城市名的任务或文本。
+2026-06-23 23:58:43 | INFO     | agent.orchestrator.master:_execute:87 | [MasterAgent] weather 完成: ❌ 无法获取 请提供需要提取城市名的任务或文本。 的天气
+2026-06-23 23:58:47 | INFO     | agent.orchestrator.master:_execute:87 | [MasterAgent] translate 完成: 请提供需要翻译的文本。
+2026-06-23 23:58:47 | INFO     | agent.orchestrator.master:run:31 | [MasterAgent] 所有任务完成
+2026-06-23 23:58:48 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 查一下杭州天气，然后翻译成英文
+2026-06-23 23:58:48 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:58:57 | INFO     | server.app:log_requests:68 | OPTIONS /chat/conversations/eb25913a-aa44-4f1d-a6b2-a53615504aa6 → 200 (0.00s)
+2026-06-23 23:58:57 | INFO     | server.app:log_requests:68 | DELETE /chat/conversations/eb25913a-aa44-4f1d-a6b2-a53615504aa6 → 200 (0.00s)
+2026-06-23 23:58:57 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:59:32 | INFO     | server.app:log_requests:68 | POST /chat/conversations/new → 200 (0.00s)
+2026-06-23 23:59:32 | INFO     | server.routes.chat:chat:43 | [队列] 收到请求: 查一下今天日期，然后搜索今天的历史事件 (等待中: 0)
+2026-06-23 23:59:32 | INFO     | server.routes.chat:chat:53 | 切换模型: qwen3:4b, 模式: agent
+2026-06-23 23:59:32 | INFO     | server.routes.chat:event_stream:79 | [队列] 开始处理: 查一下今天日期，然后搜索今天的历史事件, 模式: agent
+2026-06-23 23:59:32 | INFO     | server.app:log_requests:68 | POST /chat → 200 (0.01s)
+2026-06-23 23:59:33 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)
+2026-06-23 23:59:33 | INFO     | agent.orchestrator.master:run:22 | [MasterAgent] 计划: ["time", "search"]
+2026-06-23 23:59:33 | ERROR    | server.routes.chat:event_stream:120 | SSE 异常: 'str' object has no attribute 'get'
+2026-06-23 23:59:33 | INFO     | server.routes.chat:event_stream:124 | [队列] 完成: 查一下今天日期，然后搜索今天的历史事件
+2026-06-23 23:59:33 | INFO     | server.app:log_requests:68 | GET /chat/conversations → 200 (0.00s)

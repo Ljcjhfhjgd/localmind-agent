@@ -1,0 +1,109 @@
+# ============================================================================
+# LocalMind Agent v1.0 配置文件
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# 服务器配置
+# ----------------------------------------------------------------------------
+server:
+  host: "0.0.0.0"
+  port: 8765
+  rate_limit:
+    enabled: true
+    per_minute: 60
+
+# ----------------------------------------------------------------------------
+# Ollama 模型配置
+# ----------------------------------------------------------------------------
+ollama:
+  host: "localhost"
+  port: 11434
+  default_model: "qwen2.5:3b-instruct"
+  temperature: 0.3
+  stream_temperature: 0.7
+  num_predict: 3072
+  stream_num_predict: 3072
+  timeout: 60
+  stream_timeout: 120
+
+  mode_models:
+    default: "qwen2.5:3b-instruct"
+    normal: "qwen2.5:3b-instruct"
+    fast: "qwen2.5:3b-instruct"
+    reasoning: "deepseek-r1:7b"
+    agent: "qwen2.5:3b-instruct"       # 子 Agent 执行
+    agent_planner: "qwen3:4b-instruct" # 主 Agent 规划与汇总
+    rag: "qwen2.5:3b-instruct"
+    xray: "qwen2.5:3b-instruct"
+    email: "qwen2.5:3b-instruct"
+    vision: "minicpm-v:latest"
+    xray_judge: "minicpm-v:latest"
+    title: "qwen2.5:3b-instruct"
+
+# ----------------------------------------------------------------------------
+# Agent 配置
+# ----------------------------------------------------------------------------
+agent:
+  max_steps: 5
+  context_messages: 6
+  context_max_length: 500
+  history_messages: 8
+  history_max_length: 300
+
+# ----------------------------------------------------------------------------
+# 数据存储
+# ----------------------------------------------------------------------------
+data:
+  conversations_dir: "data/conversations"
+  personal_memory: "data/personal_memory.json"
+
+# ----------------------------------------------------------------------------
+# 工具配置
+# ----------------------------------------------------------------------------
+tools:
+  xray_diagnose: { enabled: true }
+  rag_search:
+    enabled: true
+    embed_model: "bge-m3:latest"
+    chunk_size: 500
+    chunk_overlap: 50
+    summary_model: "qwen2.5:7b-instruct"
+    top_k: 5
+    rerank_top_k: 3
+    eval_enabled: false
+  web_search: { enabled: true }
+  execute_code: { enabled: true }
+  calculate: { enabled: true }
+  get_current_time: { enabled: true }
+  get_weather: { enabled: true }
+  translate: { enabled: true }
+  summarize_url: { enabled: true }
+  remember: { enabled: true }
+  recall: { enabled: true }
+  send_email: { enabled: true }
+
+# ----------------------------------------------------------------------------
+# 邮件配置
+# ----------------------------------------------------------------------------
+email:
+  smtp_host: "smtp.qq.com"
+  smtp_port: 465
+  sender_email: ""
+  auth_code: ""
+
+# ----------------------------------------------------------------------------
+# 联网搜索
+# ----------------------------------------------------------------------------
+web:
+  max_results: 10
+
+# ----------------------------------------------------------------------------
+# 胸片 X 光诊断
+# ----------------------------------------------------------------------------
+xray:
+  model_path: "tools/xray/xray_models/best_classifier.enc"
+  image_size: 224
+  normalize_mean: [0.5, 0.5, 0.5]
+  normalize_std: [0.5, 0.5, 0.5]
+  ood_stats_path: "tools/xray/xray_models/contrastive_ood_stats.json"
+  ood_model_path: "tools/xray/xray_models/best_model.enc"

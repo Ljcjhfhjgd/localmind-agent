@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  backend:
+    build: .
+    container_name: localmind-backend
+    ports:
+      - "8765:8765"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: localmind-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  ollama_data:

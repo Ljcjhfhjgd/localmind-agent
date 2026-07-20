@@ -1,0 +1,111 @@
+/**
+ * 文件名: src/styles/transitions.css
+ * 功能: 页面切换过渡动画 - 手环方向感知的滑入滑出
+ */
+
+/* ========== 向右滑入（目标在右边） ========== */
+.mode-slide-right-enter-active,
+.mode-slide-right-leave-active {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* 进入：从右边40px滑入 */
+.mode-slide-right-enter-from {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+/* 离开：向左40px滑出 */
+.mode-slide-right-leave-to {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+/* ========== 向左滑入（目标在左边） ========== */
+.mode-slide-left-enter-active,
+.mode-slide-left-leave-active {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* 进入：从左边40px滑入 */
+.mode-slide-left-enter-from {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+/* 离开：向右40px滑出 */
+.mode-slide-left-leave-to {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+/* ========== 消息淡入 ========== */
+.message-enter-active {
+  transition: all 0.3s ease;
+}
+
+.message-enter-from {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* ========== 传送带卡片过渡 ========== */
+.card-transition-enter-active,
+.card-transition-leave-active {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-transition-enter-from {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.card-transition-leave-to {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+/* ========== 设置弹窗 ========== */
+.settings-enter-active {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.settings-enter-active .settings-modal {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.settings-enter-from {
+  opacity: 0;
+}
+
+.settings-enter-from .settings-modal {
+  opacity: 0;
+  transform: scale(0.95) translateY(20px);
+}
+
+.settings-leave-active {
+  transition: all 0.2s ease;
+}
+
+.settings-leave-active .settings-modal {
+  transition: all 0.2s ease;
+}
+
+.settings-leave-to {
+  opacity: 0;
+}
+
+.settings-leave-to .settings-modal {
+  opacity: 0;
+  transform: scale(0.95) translateY(20px);
+}
