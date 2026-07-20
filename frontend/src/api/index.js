@@ -2,7 +2,7 @@
  * 文件名: src/api/index.js
  * 功能: 后端 API 封装（X-API-Key 由全局拦截自动注入）
  */
-const BASE = import.meta.env.VITE_API_BASE || '/api'
+const BASE = import.meta.env.VITE_API_BASE || (window.location.port === '80' || window.location.port === '') ? '/api' : 'http://localhost:8765'
 
 export const chatApi = {
   async sendMessage(message, files, searchOn, convId, callbacks, model = '', isRegenerate = false, selectedDocs = null) {
